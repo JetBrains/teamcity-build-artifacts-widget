@@ -12,7 +12,7 @@ const Widget = (
     isConfiguring,
     refreshPeriod,
     onRefresh,
-    isLoadingBuildStatuses,
+    isLoadingArtifacts,
     dashboardApi,
     Title,
     Configuration,
@@ -25,7 +25,7 @@ const Widget = (
       period={refreshPeriod}
     />
     <WidgetLoader
-      isLoading={isLoadingBuildStatuses}
+      isLoading={isLoadingArtifacts}
       dashboardApi={dashboardApi}
     />
     <ConfigurableWidget
@@ -40,7 +40,7 @@ const Widget = (
 
 Widget.propTypes = {
   isConfiguring: PropTypes.bool.isRequired,
-  isLoadingBuildStatuses: PropTypes.bool.isRequired,
+  isLoadingArtifacts: PropTypes.bool.isRequired,
   refreshPeriod: PropTypes.number.isRequired,
   onRefresh: PropTypes.func.isRequired,
   dashboardApi: PropTypes.object.isRequired,

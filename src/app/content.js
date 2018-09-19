@@ -24,8 +24,8 @@ const Content = (
   {
     teamcityService,
     buildType,
-    buildStatuses,
-    buildStatusLoadErrorMessage,
+    artifacts,
+    artifactsLoadErrorMessage,
     onConfigure
   }
 ) => {
@@ -39,17 +39,17 @@ const Content = (
         </span>
       </WidgetContent>
     );
-  } else if (buildStatusLoadErrorMessage) {
+  } else if (artifactsLoadErrorMessage) {
     return (
       <WidgetContent testKey={'widget-load-error'}>
         <EmptyWidget face={EmptyWidgetFaces.ERROR}>
           {i18n('Cannot load build statuses')}
           <br/>
-          {buildStatusLoadErrorMessage}
+          {artifactsLoadErrorMessage}
         </EmptyWidget>
       </WidgetContent>
     );
-  } else if (!buildStatuses.length) {
+  } else if (!artifacts.length) {
     return (
       <WidgetContent testKey={'widget-no-builds'}>
         <EmptyWidget face={EmptyWidgetFaces.HAPPY}>{i18n('No failed builds')}</EmptyWidget>
@@ -58,7 +58,7 @@ const Content = (
   } else {
     return (
       <WidgetContent testKey={'widget-build-list'}>
-        {JSON.stringify(buildStatuses)}
+        {JSON.stringify(artifacts)}
       </WidgetContent>
     );
   }
@@ -67,8 +67,8 @@ const Content = (
 Content.propTypes = {
   teamcityService: PropTypes.object,
   buildType: PropTypes.object,
-  buildStatuses: PropTypes.array.isRequired,
-  buildStatusLoadErrorMessage: PropTypes.string,
+  artifacts: PropTypes.array.isRequired,
+  artifactsLoadErrorMessage: PropTypes.string,
   onConfigure: PropTypes.func.isRequired
 };
 

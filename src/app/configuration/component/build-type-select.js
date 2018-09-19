@@ -15,6 +15,14 @@ function buildType2Item(projectOrBuildType) {
   };
 }
 
+function selectedBuildType2Item(projectOrBuildType) {
+  return projectOrBuildType && {
+    key: projectOrBuildType.id,
+    label: projectOrBuildType.path,
+    payload: projectOrBuildType
+  };
+}
+
 function isMatching(projectOrBuildType, query) {
   return !query ||
     query === '' ||
@@ -52,7 +60,7 @@ const BuildTypeSelect =
       loading={isLoading}
       disabled={isDisabled}
       filter={filter}
-      selected={selectedBuildType && buildType2Item(selectedBuildType)}
+      selected={selectedBuildType && selectedBuildType2Item(selectedBuildType)}
       size={Select.Size.FULL}
       minWidth={MinWidth.TARGET}
       data={(projectAndBuildTypeList || []).map(buildType2Item)}

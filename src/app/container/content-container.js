@@ -7,9 +7,8 @@ const ContentContainer = connect(
   state => ({
     teamcityService: state.teamcityService,
     buildType: state.buildType,
-    buildStatuses: state.buildStatuses,
-    buildStatusLoadErrorMessage: state.buildStatusLoadErrorMessage,
-    showLastSuccessful: state.showLastSuccessful
+    artifacts: state.artifacts,
+    artifactsLoadErrorMessage: state.artifactsLoadErrorMessage
   }),
   dispatch => ({
     onConfigure: () => dispatch(startConfiguration(false))

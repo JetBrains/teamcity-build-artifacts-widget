@@ -37,8 +37,7 @@ const reduce = createReducer({
     showLastPinned,
     tags,
     refreshPeriod,
-    buildStatuses,
-    buildPaths
+    artifacts
   }) => ({
     ...state,
     title,
@@ -48,8 +47,7 @@ const reduce = createReducer({
     showLastPinned,
     tags,
     refreshPeriod: refreshPeriod || DEFAULT_PERIOD,
-    buildStatuses: buildStatuses || [],
-    buildPaths: buildPaths || {}
+    artifacts: artifacts || []
   }),
   [openConfiguration]: (state, isInitialConfiguration) => ({
     ...state,
@@ -186,19 +184,19 @@ const reduce = createReducer({
   }),
   [startedStatusLoading]: state => ({
     ...state,
-    isLoadingBuildStatuses: true
+    isLoadingArtifacts: true
   }),
-  [finishedStatusLoading]: (state, buildStatuses) => ({
+  [finishedStatusLoading]: (state, artifacts) => ({
     ...state,
-    buildStatuses,
-    isLoadingBuildStatuses: false,
-    buildStatusLoadErrorMessage: null
+    artifacts,
+    isLoadingArtifacts: false,
+    artifactsLoadErrorMessage: null
   }),
-  [failedStatusLoading]: (state, buildStatusLoadErrorMessage) => ({
+  [failedStatusLoading]: (state, artifactsLoadErrorMessage) => ({
     ...state,
-    buildStatuses: [],
-    isLoadingBuildStatuses: false,
-    buildStatusLoadErrorMessage
+    artifacts: [],
+    isLoadingArtifacts: false,
+    artifactsLoadErrorMessage
   })
 }, {
   title: null,
@@ -209,10 +207,9 @@ const reduce = createReducer({
   tags: '',
   refreshPeriod: DEFAULT_PERIOD,
 
-  buildStatuses: [],
-  buildPaths: {},
-  isLoadingBuildStatuses: false,
-  buildStatusLoadErrorMessage: null,
+  artifacts: [],
+  isLoadingArtifacts: false,
+  artifactsLoadErrorMessage: null,
 
   configuration: {
     isConfiguring: false,

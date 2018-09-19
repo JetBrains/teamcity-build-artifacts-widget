@@ -11,7 +11,7 @@ import ContentContainer from './content-container';
 const WidgetContainer = connect(
   (state, {dashboardApi}) => ({
     isConfiguring: state.configuration.isConfiguring,
-    isLoadingBuildStatuses: state.isLoadingBuildStatuses,
+    isLoadingArtifacts: state.isLoadingArtifacts,
     // eslint-disable-next-line no-magic-numbers
     refreshPeriod: state.refreshPeriod * 1000,
     dashboardApi,
