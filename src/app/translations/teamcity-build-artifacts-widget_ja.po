@@ -11,11 +11,7 @@ msgstr ""
 "Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2018-09-19 17:12\n"
-
-#: src/app/configuration/component/build-type-select.js:58
-msgid "All build configurations"
-msgstr ""
+"PO-Revision-Date: 2018-09-19 17:14\n"
 
 #: src/app/container/title-container.js:11
 #: src/app/container/title-container.js:20
@@ -27,7 +23,8 @@ msgid "Artifacts: {{ buildConfiguration }}"
 msgstr ""
 
 #: src/app/configuration/component/build-type-select.js:57
-msgid "Build configurations"
+#: src/app/configuration/component/build-type-select.js:58
+msgid "Build configuration"
 msgstr ""
 
 #: src/app/configuration/container/tags-input-container.js:11
