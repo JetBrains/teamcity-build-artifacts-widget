@@ -1,4 +1,4 @@
-import 'babel-polyfill';
+import '@babel/polyfill';
 import DashboardAddons from 'hub-dashboard-addons';
 import {setLocale} from 'hub-dashboard-addons/dist/localization';
 import React from 'react';

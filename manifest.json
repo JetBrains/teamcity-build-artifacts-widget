@@ -4,8 +4,15 @@
   "version": "1.0.0",
   "description": "Hub dashboard widget to list downloadable artifacts of a TeamCity configurations",
   "author": "Hub Team",
+  "applicationName": "TeamCity",
   "products": {
-    "Hub": "2018.2",
-    "YouTrack": "2018.2"
+    "Hub": ">=2018.1"
+  },
+  "dependencies": {
+    "Hub": ">=2017.1",
+    "TeamCity": ">=10.0"
+  },
+  "capabilities": {
+    "topNavigation": true
   }
 }

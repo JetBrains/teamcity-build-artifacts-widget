@@ -67,6 +67,21 @@ const webpackConfig = () => ({
         test: /\.js$/,
         include: [componentsPath],
         loader: 'babel-loader?cacheDirectory'
+      },
+      {
+        test: /\.po$/,
+        include: [
+          componentsPath
+        ],
+        use: [
+          'json-loader',
+          {
+            loader: 'angular-gettext-loader',
+            options: {
+              format: 'json'
+            }
+          }
+        ]
       }
     ]
   },
