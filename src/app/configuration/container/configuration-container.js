@@ -13,6 +13,7 @@ import TitleInputContainer from './title-input-container';
 import ServiceSelectContainer from './service-select-container';
 import RefreshPeriodContainer from './refresh-period-container';
 import BuildTypeSelectContainer from './build-type-select-container';
+import TagsInputContainer from './tags-input-container';
 
 
 const ConfigurationContainer = connect(
@@ -21,6 +22,7 @@ const ConfigurationContainer = connect(
     titleInput: <TitleInputContainer/>,
     serviceSelect: <ServiceSelectContainer/>,
     configurationSelect: <BuildTypeSelectContainer/>,
+    tagsInput: <TagsInputContainer/>,
 
     showLastSuccessful: state.configuration.showLastSuccessful,
 

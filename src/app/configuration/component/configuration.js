@@ -14,6 +14,7 @@ const Configuration = (
     titleInput,
     serviceSelect,
     configurationSelect,
+    tagsInput,
 
     showLastSuccessful,
     onShowLastSuccessfulChange,
@@ -44,6 +45,8 @@ const Configuration = (
       {configurationSelect}
     </div>
 
+    {tagsInput}
+
     <div
       className={classNames(styles.control, styles.controlFirst)}
       data-test="show-last-successful"
@@ -73,6 +76,7 @@ Configuration.propTypes = {
   titleInput: PropTypes.node.isRequired,
   serviceSelect: PropTypes.node.isRequired,
   configurationSelect: PropTypes.node.isRequired,
+  tagsInput: PropTypes.node.isRequired,
 
   showLastSuccessful: PropTypes.bool.isRequired,
   onShowLastSuccessfulChange: PropTypes.func.isRequired,

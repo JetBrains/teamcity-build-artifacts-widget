@@ -32,6 +32,9 @@ export const updateShowLastSuccessful =
 export const updateShowLastPinned =
   createAction('Toggle show last pinned checkbox');
 
+export const updateTags =
+  createAction('Update tags');
+
 export const applyConfiguration = createAction('Apply configuration');
 export const closeConfiguration = createAction('Close configuration mode');
 
@@ -122,6 +125,7 @@ export const saveConfiguration = () => async (dispatch, getState, {dashboardApi}
       selectedBuildType,
       showLastSuccessful,
       showLastPinned,
+      tags,
       refreshPeriod
     }
   } = getState();
@@ -135,6 +139,7 @@ export const saveConfiguration = () => async (dispatch, getState, {dashboardApi}
     },
     showLastSuccessful,
     showLastPinned,
+    tags,
     refreshPeriod
   });
   await dispatch(applyConfiguration());
@@ -162,18 +167,19 @@ export const initWidget = () => async (dispatch, getState, {dashboardApi, regist
     buildType,
     showLastSuccessful,
     showLastPinned,
+    tags,
     refreshPeriod
   } = config || {};
-  const {result: {buildStatuses, buildPaths}} = ((await dashboardApi.readCache())) || {result: {}};
+  const {result: {buildArtifacts}} = ((await dashboardApi.readCache())) || {result: {}};
   await dispatch(setInitialSettings({
     title,
     teamcityService,
     buildType,
     showLastSuccessful: showLastSuccessful || false,
     showLastPinned: showLastPinned || false,
+    tags,
     refreshPeriod,
-    buildStatuses,
-    buildPaths
+    buildArtifacts
   }));
   await dispatch(reloadArtifacts());
   if (!config) {

@@ -18,9 +18,10 @@ import {
   startedBuildTypesLoading,
   startedStatusLoading,
   startedTeamcityServicesLoading,
-  updateShowLastPinned,
   updateRefreshPeriod,
+  updateShowLastPinned,
   updateShowLastSuccessful,
+  updateTags,
   updateTitle
 } from './actions';
 
@@ -34,6 +35,7 @@ const reduce = createReducer({
     buildType,
     showLastSuccessful,
     showLastPinned,
+    tags,
     refreshPeriod,
     buildStatuses,
     buildPaths
@@ -44,6 +46,7 @@ const reduce = createReducer({
     buildType,
     showLastSuccessful,
     showLastPinned,
+    tags,
     refreshPeriod: refreshPeriod || DEFAULT_PERIOD,
     buildStatuses: buildStatuses || [],
     buildPaths: buildPaths || {}
@@ -59,6 +62,7 @@ const reduce = createReducer({
       selectedBuildType: state.buildType,
       showLastSuccessful: state.showLastSuccessful,
       showLastPinned: state.showLastPinned,
+      tags: state.tags,
 
       isInitialConfiguration
     }
@@ -149,6 +153,13 @@ const reduce = createReducer({
       showLastPinned
     }
   }),
+  [updateTags]: (state, tags) => ({
+    ...state,
+    configuration: {
+      ...state.configuration,
+      tags
+    }
+  }),
   [updateRefreshPeriod]: (state, refreshPeriod) => ({
     ...state,
     configuration: {
@@ -163,7 +174,8 @@ const reduce = createReducer({
     teamcityService: state.configuration.selectedTeamcityService,
     buildType: state.configuration.selectedBuildType,
     showLastSuccessful: state.configuration.showLastSuccessful,
-    showLastPinned: state.configuration.showLastPinned
+    showLastPinned: state.configuration.showLastPinned,
+    tags: state.configuration.tags
   }),
   [closeConfiguration]: state => ({
     ...state,
@@ -194,6 +206,7 @@ const reduce = createReducer({
   buildType: null,
   showLastSuccessful: false,
   showLastPinned: false,
+  tags: '',
   refreshPeriod: DEFAULT_PERIOD,
 
   buildStatuses: [],
@@ -218,6 +231,8 @@ const reduce = createReducer({
     isLoadingBuildTypes: false,
     selectedBuildType: [],
     buildTypeLoadErrorMessage: null,
+
+    tags: '',
 
     showLastSuccessful: false,
     showLastPinned: false
