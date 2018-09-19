@@ -7,55 +7,43 @@ msgstr ""
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: youtrackjetbrains\n"
 "X-Crowdin-Language: ru\n"
-"X-Crowdin-File: /widgets/teamcity-project-status-widget/default.pot\n"
+"X-Crowdin-File: /widgets/teamcity-build-artifacts-widget/default.pot\n"
 "Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2018-09-19 12:57\n"
+"PO-Revision-Date: 2018-09-19 17:04\n"
 
-#: src/app/configuration/component/build-type-select.js:63
+#: src/app/configuration/component/build-type-select.js:50
 msgid "All build configurations"
 msgstr ""
 
-#: src/app/build-status.js:54
-msgid "Assigned by"
+#: src/app/container/title-container.js:11
+#: src/app/container/title-container.js:20
+msgid "Artifacts"
 msgstr ""
 
-#: src/app/build-status.js:65
-msgid "Automatically when fixed"
+#: src/app/container/title-container.js:19
+msgid "Artifacts: {{ buildConfiguration }}"
 msgstr ""
 
-#: src/app/configuration/component/build-type-select.js:62
+#: src/app/configuration/component/build-type-select.js:49
 msgid "Build configurations"
+msgstr "Конфигурации сборки"
+
+#: src/app/configuration/container/tags-input-container.js:11
+msgid "Build with specified tags (comma-separated)"
 msgstr ""
 
 #: src/app/configuration/component/configuration.js:33
 msgid "Cancel"
-msgstr ""
+msgstr "Отмена"
 
-#: src/app/content.js:49
+#: src/app/content.js:46
 msgid "Cannot load build statuses"
 msgstr ""
 
-#: src/app/build-status.js:68
-msgid "Comment"
-msgstr ""
-
-#: src/app/configuration/component/build-type-select.js:44
-#: src/app/configuration/component/project-select.js:48
-msgid "Filter projects"
-msgstr ""
-
-#: src/app/configuration/component/configuration.js:68
-msgid "Hide child projects"
-msgstr ""
-
-#: src/app/build-status.js:50
-msgid "Investigator"
-msgstr ""
-
-#: src/app/build-status.js:89
-msgid "Is being investigated by: {{ user }}"
+#: src/app/configuration/component/build-type-select.js:32
+msgid "Filter projects and build configurations"
 msgstr ""
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:90
@@ -66,11 +54,7 @@ msgstr ""
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 msgstr ""
 
-#: src/app/build-status.js:64
-msgid "Manually"
-msgstr ""
-
-#: src/app/content.js:58
+#: src/app/content.js:55
 msgid "No failed builds"
 msgstr ""
 
@@ -78,38 +62,20 @@ msgstr ""
 msgid "Optional title"
 msgstr ""
 
-#: src/app/configuration/component/project-select.js:55
-#: src/app/configuration/component/project-select.js:56
-msgid "Project"
-msgstr ""
-
-#: src/app/build-status.js:62
-msgid "Resolve"
-msgstr ""
-
 #: src/app/configuration/component/configuration.js:30
 msgid "Save"
 msgstr ""
 
-#: src/app/content.js:41
+#: src/app/content.js:38
 msgid "Set up..."
 msgstr ""
 
-#: src/app/configuration/component/configuration.js:57
-msgid "Show green builds"
+#: src/app/configuration/component/configuration.js:66
+msgid "Show last pinned build"
 msgstr ""
 
-#: src/app/build-status.js:58
-msgid "Since"
-msgstr ""
-
-#: src/app/container/title-container.js:23
-#: src/app/container/title-container.js:32
-msgid "Status"
-msgstr ""
-
-#: src/app/container/title-container.js:31
-msgid "Status: {{ project }}"
+#: src/app/configuration/component/configuration.js:55
+msgid "Show last successful build"
 msgstr ""
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:88
@@ -127,13 +93,13 @@ msgstr ""
 
 #: src/app/configuration/container/refresh-period-container.js:11
 msgid "Widget refreshes every minute"
-msgstr ""
+msgstr "Виджет обновляется раз в минуту"
 
 #: src/app/configuration/container/refresh-period-container.js:12
 msgid "Widget refreshes every {{minutes}} minutes"
-msgstr ""
+msgstr "Виджет обновляется раз в {{minutes}} мин"
 
-#: src/app/content.js:39
+#: src/app/content.js:36
 msgid "Widget setup is not finished yet."
 msgstr ""
 
