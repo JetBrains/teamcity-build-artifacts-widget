@@ -1,103 +1,62 @@
-## Developing a Hub widget
-The following commands are available:
+# TeamCity Project Status Widget
+[![Build Status][ci-img]][ci-bt] [![JetBrains team project](http://jb.gg/badges/team.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
+
+This widget displays a list of build configurations from TeamCity with their current statuses. This widget can be added to dashboards and project overview pages in a Hub installation.
+
+## Getting Started
+This project is open source. You are welcome to contribute to the development of this widget or use the source code as a springboard to develop your own widgets.
+
+After you check out the project, run `npm install` once to install all of the dependencies.
+
+When installed, the following commands are available:
 
   - `npm test` to launch karma tests
   - `npm start` to run a local development server
   - `npm run lint` to lint your code (JS and CSS)
   - `npm run stylelint` to lint CSS only
   - `npm run build` to generate a production bundle (will be available under `dist`)
+  - `npm run dist` to build ZIP distributive
   - `npm run ci-test` to launch karma tests and report the results to TeamCity
+  
+## Widget Testing
 
-To check your widget, go to the widget playground page located at `<your_hub_server>/dashboard/widgets-playground`.
+You can test widget updates directly in the user interface for Hub. Follow the instructions in the [Hub documentation](https://www.jetbrains.com/help/hub/test-custom-widgets.html).
 
-You may encounter the following problem when using a local development server together with Hub running over HTTPS: all major browsers block insecure scripts. 
-In Chrome you can add a security exception: click the security notification in the address bar (the one saying "The page is trying to load scripts from unauthenticated sources") and 
+All major browsers block insecure scripts. You may encounter a problem when you host your widget on a local development server and try to load it into an application over HTTPS. 
+In Chrome, you can add a security exception: click the security notification in the address bar (the one that says "The page is trying to load scripts from unauthenticated sources") and 
 press the "Load unsafe scripts" button. Similar workarounds are available in other browsers as well.
+Additional options for testing widgets over a secure connection are described in the documentation for Hub.
 
-## Introduction into widget development
-The `app` folder contains a demo widget that shows a welcome message. Its configuration screen allows selecting the font color.
+## JetBrains Ring UI Widget Generator
 
-In this guide we'll show you how to add a new parameter to the configuration screen and use its value in the rendered widget.
+This project was built using the [widget generator](https://github.com/JetBrains/ring-ui/tree/master/packages/generator/hub-widget) from the JetBrains Ring UI Library. If you want to build your own widgets for use in one of our products, this tool helps you get up and running in seconds flat.
 
-Open the `app.js` file, all the changes will be made there.
+## Widget Installation
 
-First of all, import the `Input` component from Ring UI:
+This widget is available from the [JetBrains Plugins Repository](https://plugins.jetbrains.com/). This repository is integrated directly into the **Custom Widgets** page in your Hub installation. To install any widget from this repository:
+1. Open the **Custom Widgets** page in your installation.
+2. Select the widget that you want to install from the list.
+3. Click the **Install** button in the page header.
 
-```
-import Input from '@jetbrains/ring-ui/components/input/input';
-```
+## Contributions
 
-Configuration screen is rendered by the `renderConfiguration` function. Let's put an input below the select:
+We appreciate all kinds of feedback. Please feel free to send a pull request or submit an issue.
 
-```
-<Input
-  label="What is your name?"
-/>
-```
+## Contributors
 
-To set input's placeholder use the `label` property.
+Thanks goes to these rockstars ([emoji key][emojis]):
 
-If you haven't launched the dev server yet, run `yarn start`, open the widget playground (`<your_hub_server>/dashboard/widgets-playground`), 
-specify the URL of the dev server (e.g., `http://localhost:9010/`) and reload the widget by clicking the corresponding button.
+| [<img src="https://avatars1.githubusercontent.com/u/92777?v=4" width="100px;"/><br /><sub><b>Maxim Mazin</b></sub>](https://github.com/mazine)<br />[💻](https://github.com/JetBrains/teamcity-project-status-widget/commits?author=mazine "Code") | [<img src="https://avatars2.githubusercontent.com/u/4318513?v=4" width="100px;"/><br /><sub><b>Andrey Skladchikov</b></sub>](https://github.com/huston007)<br />[💻](https://github.com/JetBrains/teamcity-project-status-widget/commits?author=huston007 "Code") | [<img src="https://avatars0.githubusercontent.com/u/2738412?s=400&v=4" width="100px;"/><br /><sub><b>Ekaterina Zaikina</b></sub>](https://github.com/katriyna)<br />[💻](https://github.com/JetBrains/teamcity-project-status-widget/commits?author=katriyna "Code") |
+| :---: | :---: | :---: |
 
-An input we've just added should appear on the configuration screen of the widget.
+This project follows the [all-contributors][all-contributors] specification.
+Contributions of any kind are welcome!
 
-To store the value of the input in the state of the widget, we add the `onChange` prop:
+## License
 
-```
-<Input
-  label="What is your name?"
-  onChange={this.changeName}
-/>
-```
+This project is licensed under the Apache 2.0 License. For details, refer to the [LICENSE.txt file](https://github.com/JetBrains/hub-project-team-widget/blob/master/LICENSE.txt).
 
-and implement the `changeName` handler:
-
-```
-changeName = e => this.setState({
-  username: e.target.value
-});
-```
-
-To display the value we retrieve it from state in the very beginning of the `renderConfiguration` function together with `selectedColor`:
-
-```
-const {selectedColor, username} = this.state;
-```
-
-and pass the value into the `Input` as `value` prop:
-
-```
-value={username}
-```
-
-Our `Input` now looks like this:
-
-```
-<Input
-  label="What is your name?"
-  value={username}
-  onChange={this.changeName}
-/>
-```
-
-Now, we need to persist the value. To do so, Dashboard API comes in handy:
-
-```
-const {selectedColor, username} = this.state;
-await this.props.dashboardApi.storeConfig({selectedColor, username});
-```
-
-Finally, we use the stored value in the `render` method of our widget: 
-
-```
-const {username, selectedColor, isConfiguring} = this.state;
-
-...
-
-<h1 style={{color: selectedColor.key}}>{sayHello(username)}</h1>
-```
-
-Now we can hit "Reload widget" and see if everything works!
-
-[1]: http://yeoman.io/
+[ci-bt]: https://teamcity.jetbrains.com/viewType.html?buildTypeId=JetBrainsUi_HubWidgets_TeamCityProjectStatusWidget
+[ci-img]: https://teamcity.jetbrains.com/app/rest/builds/buildType:JetBrainsUi_HubWidgets_TeamCityProjectStatusWidget/statusIcon.svg
+[emojis]: https://github.com/kentcdodds/all-contributors#emoji-key
+[all-contributors]: https://github.com/kentcdodds/all-contributors
