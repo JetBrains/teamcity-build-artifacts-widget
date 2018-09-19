@@ -11,9 +11,9 @@ msgstr ""
 "Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2018-09-19 17:03\n"
+"PO-Revision-Date: 2018-09-19 17:12\n"
 
-#: src/app/configuration/component/build-type-select.js:50
+#: src/app/configuration/component/build-type-select.js:58
 msgid "All build configurations"
 msgstr ""
 
@@ -26,7 +26,7 @@ msgstr ""
 msgid "Artifacts: {{ buildConfiguration }}"
 msgstr ""
 
-#: src/app/configuration/component/build-type-select.js:49
+#: src/app/configuration/component/build-type-select.js:57
 msgid "Build configurations"
 msgstr ""
 
@@ -42,7 +42,7 @@ msgstr ""
 msgid "Cannot load build statuses"
 msgstr ""
 
-#: src/app/configuration/component/build-type-select.js:32
+#: src/app/configuration/component/build-type-select.js:40
 msgid "Filter projects and build configurations"
 msgstr ""
 
