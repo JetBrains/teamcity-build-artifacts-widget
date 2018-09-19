@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 
 import Widget from '../widget';
-import {reloadStatuses} from '../redux/actions';
+import {reloadArtifacts} from '../redux/actions';
 import ConfigurationContainer from '../configuration/container/configuration-container';
 
 import TitleContainer from './title-container';
@@ -20,7 +20,7 @@ const WidgetContainer = connect(
     Content: ContentContainer
   }),
   dispatch => ({
-    onRefresh: () => dispatch(reloadStatuses())
+    onRefresh: () => dispatch(reloadArtifacts())
   })
 )(Widget);
 

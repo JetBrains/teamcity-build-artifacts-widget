@@ -7,74 +7,102 @@ export default class TeamcityService {
   }
 
   async getProjects(teamcityService) {
-    return await this._fetchTeamcity(teamcityService, 'projects', {
-      fields: 'project(id,name,parentProjectId,archived)'
-    });
-  }
-
-  async getSubProjects(teamcityService, project) {
-    return await this._fetchTeamcity(teamcityService, 'projects', {
-      locator: `affectedProject:(id:${project.id})`,
-      fields: 'project(id,name,parentProjectId,archived)'
-    });
-  }
-
-  async getBuildTypesOfProject(teamcityService, project) {
-    return await this._fetchTeamcity(teamcityService, 'buildTypes', {
-      locator: `affectedProject:(id:${project.id})`,
-      fields: 'buildType(id,name,projectId)'
-    });
-  }
-
-  async getBuildStatuses(teamcityService, project, buildTypes, hideChildProjects) {
-    let locator;
-    if (buildTypes.length > 0) {
-      locator = buildTypes.map(it => `item(id:${it.id})`).join(',');
-    } else if (hideChildProjects) {
-      locator = `project:(id:${project.id})`;
-    } else {
-      locator = `affectedProject:(id:${project.id}),project:(archived:false)`;
-    }
-
-    return await this._fetchTeamcity(teamcityService, 'buildTypes', {
-      locator,
-      fields: 'count,nextHref,buildType(' +
-        'id,webUrl,name,' +
-        'builds(' +
-        '$locator:(running:false,canceled:false,count:1),' +
-        'build(number,webUrl,startDate,finishDate,status,statusText)' +
-        '),' +
-        'investigations(investigation(' +
-        'assignee(name,username),' +
-        'assignment(user(name,username),timestamp,text),' +
-        'resolution(type))' +
-        '),' +
-        'project(archived,id,name)' +
-        ')'
-    });
-  }
-
-  async getPaths(teamcityService, project) {
     const [projectResponse, buildTypeResponse] = await Promise.all([
-      this.getSubProjects(teamcityService, project),
-      this.getBuildTypesOfProject(teamcityService, project)
+      this._fetchTeamcity(teamcityService, 'projects', {
+        locator: 'archived:false',
+        fields: 'project(id,name,parentProjectId,archived)'
+      }),
+      this._fetchTeamcity(teamcityService, 'buildTypes', {
+        fields: 'buildType(id,name,projectId)'
+      })
     ]);
 
-    const projects = projectResponse.project;
+    const projects = projectResponse.project.filter(it => it.id !== '_Root');
+    const buildTypes = buildTypeResponse.buildType;
 
     const projectMap = {};
     projects.forEach(it => (projectMap[it.id] = it));
 
-    const paths = {};
-    buildTypeResponse.buildType.forEach(buildType => {
-      const path = [buildType.name];
-      for (let cur = projectMap[buildType.projectId]; cur; cur = projectMap[cur.parentProjectId]) {
-        path.unshift(cur.name);
+    const roots = TeamcityService._buildTree(projects, projectMap, buildTypes);
+    return TeamcityService._flattenTree(roots);
+  }
+
+  async getArtifacts(buildType, showLastSuccessful, showLastPinned, tags) {
+    // TODO
+    return [];
+  }
+
+  static _buildTree(projects, projectMap, buildTypes) {
+    // Build a forest of projects
+    const roots = [];
+    projects.forEach(project => {
+      const parent = projectMap[project.parentProjectId];
+      if (parent) {
+        const children = parent.children || [];
+        children.push(project);
+        parent.children = children;
+        project.parent = parent;
+      } else {
+        roots.push(project);
       }
-      paths[buildType.id] = path.join(' :: ');
     });
 
-    return paths;
+    buildTypes.forEach(buildType => {
+      const parent = projectMap[buildType.projectId];
+      if (parent) {
+        const childBuildTypes = parent.buildTypes || [];
+        childBuildTypes.push(buildType);
+        parent.buildTypes = childBuildTypes;
+        buildType.parent = parent;
+        buildType.isBuildType = true;
+      }
+    });
+
+    projects.forEach(project => {
+      project.path = TeamcityService._getPath(project);
+    });
+    buildTypes.forEach(buildType => {
+      buildType.path = TeamcityService._getPath(buildType);
+    });
+
+    return roots;
+  }
+
+  /**
+   * Returns a path to a tree node
+   *
+   * @param {{name: string, parent: object}} node - tree node to build path for
+   * @return {string} - path to a tree node
+   */
+  static _getPath(node) {
+    const path = [];
+    for (let cur = node; cur != null; cur = cur.parent) {
+      path.unshift(cur.name);
+    }
+    return path.join(' :: ');
+  }
+
+  static _flattenTree(roots) {
+    const flattenProjects = [];
+    let currentLevel = 0;
+
+    function flattenTree(node) {
+      node.level = currentLevel;
+      flattenProjects.push(node);
+      currentLevel++;
+      if (node.buildTypes) {
+        node.buildTypes.forEach(flattenTree);
+      }
+      if (node.children) {
+        node.children.forEach(flattenTree);
+      }
+      currentLevel--;
+    }
+
+    roots.forEach(flattenTree);
+
+    return flattenProjects;
+
   }
 
   async _fetchTeamcity(teamcityService, path, query) {

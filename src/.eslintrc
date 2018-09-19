@@ -11,5 +11,13 @@
   "env": {
     "browser": true,
     "node": true
+  },
+  "rules": {
+    "max-len": ["warn", {
+      "code": 100,
+      "ignoreComments": true,
+      "ignoreTemplateLiterals": true,
+      "ignoreRegExpLiterals": true
+    }]
   }
 }

@@ -6,7 +6,6 @@ import EmptyWidget, {EmptyWidgetFaces} from '@jetbrains/hub-widget-ui/dist/empty
 import {i18n} from 'hub-dashboard-addons/dist/localization';
 
 import styles from './app.css';
-import BuildStatus from './build-status';
 
 function WidgetContent({children, testKey}) {
   return (
@@ -24,15 +23,13 @@ WidgetContent.propTypes = {
 const Content = (
   {
     teamcityService,
-    project,
+    buildType,
     buildStatuses,
-    buildPaths,
-    showGreenBuilds,
     buildStatusLoadErrorMessage,
     onConfigure
   }
 ) => {
-  if (!teamcityService || !project) {
+  if (!teamcityService || !buildType) {
     return (
       <WidgetContent testKey={'widget-setup-pending'}>
         <span>
@@ -61,15 +58,7 @@ const Content = (
   } else {
     return (
       <WidgetContent testKey={'widget-build-list'}>
-        {buildStatuses.
-          map(buildType => (
-            <BuildStatus
-              key={buildType.id}
-              buildType={buildType}
-              path={buildPaths[buildType.id] || buildType.name}
-              showGreenBuilds={showGreenBuilds}
-            />
-          ))}
+        {JSON.stringify(buildStatuses)}
       </WidgetContent>
     );
   }
@@ -77,11 +66,9 @@ const Content = (
 
 Content.propTypes = {
   teamcityService: PropTypes.object,
-  project: PropTypes.object,
+  buildType: PropTypes.object,
   buildStatuses: PropTypes.array.isRequired,
-  buildPaths: PropTypes.object.isRequired,
   buildStatusLoadErrorMessage: PropTypes.string,
-  showGreenBuilds: PropTypes.bool.isRequired,
   onConfigure: PropTypes.func.isRequired
 };
 

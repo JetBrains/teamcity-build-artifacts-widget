@@ -1,7 +1,6 @@
 import {createAction} from 'redux-act';
 
 import TeamcityService from '../teamcity/teamcity-service';
-import {asFlattenBuildTypeTree, asFlattenProjectTree} from '../teamcity/teamcity-convert';
 
 export const setInitialSettings = createAction('Set initial settings');
 export const openConfiguration = createAction('Open configuration mode');
@@ -18,15 +17,6 @@ export const failedTeamcityServicesLoading =
 export const selectTeamcityService =
   createAction('Select TeamCity service');
 
-export const startedProjectsLoading =
-  createAction('Started loading list of projects');
-export const finishedProjectsLoading =
-  createAction('Finished loading list of projects');
-export const failedProjectsLoading =
-  createAction('Failed to load list of projects');
-export const selectProject =
-  createAction('Select project');
-
 export const startedBuildTypesLoading =
   createAction('Started loading list of build types');
 export const finishedBuildTypesLoading =
@@ -35,14 +25,12 @@ export const failedBuildTypesLoading =
   createAction('Failed to load list of build types');
 export const selectBuildType =
   createAction('Add selected build type');
-export const deselectBuildType =
-  createAction('Add selected build type');
 
-export const updateShowGreenBuilds =
-  createAction('Toggle show green builds checkbox');
+export const updateShowLastSuccessful =
+  createAction('Toggle show last successful build checkbox');
 
-export const updateHideChildProjects =
-  createAction('Toggle hide child projects');
+export const updateShowLastPinned =
+  createAction('Toggle show last pinned checkbox');
 
 export const applyConfiguration = createAction('Apply configuration');
 export const closeConfiguration = createAction('Close configuration mode');
@@ -55,32 +43,27 @@ export const failedStatusLoading =
   createAction('Failed to load project builds statuses');
 
 // eslint-disable-next-line complexity
-export const reloadStatuses = () => async (dispatch, getState, {dashboardApi}) => {
+export const reloadArtifacts = () => async (dispatch, getState, {dashboardApi}) => {
   const {
     teamcityService,
-    project,
-    buildTypes,
-    hideChildProjects
+    buildType,
+    showLastSuccessful,
+    showLastPinned,
+    tags
   } = getState();
-  if (teamcityService && project && buildTypes) {
+  if (teamcityService && buildType) {
     await dispatch(startedStatusLoading());
 
     const server = new TeamcityService(dashboardApi);
     try {
-      const buildStatusRequest = server.getBuildStatuses(
-        teamcityService,
-        project,
-        buildTypes,
-        hideChildProjects
+      const buildArtifacts = await server.getArtifacts(
+        buildType,
+        showLastSuccessful,
+        showLastPinned,
+        tags
       );
-      const buildPathsRequest = server.getPaths(teamcityService, project);
-      const [buildStatusResponse, buildPaths] = await Promise.all([
-        buildStatusRequest,
-        buildPathsRequest
-      ]);
-      const buildStatuses = buildStatusResponse.buildType;
-      await dashboardApi.storeCache({buildStatuses, buildPaths});
-      await dispatch(finishedStatusLoading(buildStatuses));
+      await dashboardApi.storeCache({buildArtifacts});
+      await dispatch(finishedStatusLoading(buildArtifacts));
     } catch (e) {
       const error = (e.data && e.data.message) || e.message || e.toString();
       await dispatch(failedStatusLoading(error));
@@ -109,38 +92,14 @@ export const loadTeamCityServices = () => async (dispatch, getState, {dashboardA
   }
 };
 
-export const loadProjects = () => async (dispatch, getState, {dashboardApi}) => {
+export const loadBuildTypes = () => async (dispatch, getState, {dashboardApi}) => {
   const {configuration: {selectedTeamcityService}} = getState();
   if (selectedTeamcityService) {
-    await dispatch(startedProjectsLoading());
-    try {
-      const teamcityService = new TeamcityService(dashboardApi);
-      const projectsResponse = await teamcityService.getProjects(selectedTeamcityService);
-      await dispatch(finishedProjectsLoading(asFlattenProjectTree(projectsResponse)));
-    } catch (e) {
-      const error = (e.data && e.data.message) || e.message || e.toString();
-      const message = `Cannot load list of TeamCity projects: ${error}`;
-      await dispatch(failedProjectsLoading(message));
-    }
-  }
-};
-
-export const loadBuildTypes = () => async (dispatch, getState, {dashboardApi}) => {
-  const {configuration: {selectedTeamcityService, selectedProject}} = getState();
-  if (selectedTeamcityService && selectedProject) {
     await dispatch(startedBuildTypesLoading());
     try {
       const teamcityService = new TeamcityService(dashboardApi);
-      const [projectsResponse, buildTypesResponse] = await Promise.all([
-        teamcityService.getSubProjects(selectedTeamcityService, selectedProject),
-        teamcityService.getBuildTypesOfProject(selectedTeamcityService, selectedProject)
-      ]);
-      const projectsAndBuildTypesTree = asFlattenBuildTypeTree(
-        selectedProject,
-        projectsResponse,
-        buildTypesResponse
-      );
-      await dispatch(finishedBuildTypesLoading(projectsAndBuildTypesTree));
+      const projectsAndBuildTypes = await teamcityService.getProjects(selectedTeamcityService);
+      await dispatch(finishedBuildTypesLoading(projectsAndBuildTypes));
     } catch (e) {
       const error = (e.data && e.data.message) || e.message || e.toString();
       const message = `Cannot load list of TeamCity configurations: ${error}`;
@@ -160,33 +119,27 @@ export const saveConfiguration = () => async (dispatch, getState, {dashboardApi}
     configuration: {
       title,
       selectedTeamcityService,
-      selectedProject,
-      selectedBuildTypes,
-      showGreenBuilds,
-      hideChildProjects,
+      selectedBuildType,
+      showLastSuccessful,
+      showLastPinned,
       refreshPeriod
     }
   } = getState();
   await dashboardApi.storeConfig({
     title,
     teamcityService: selectedTeamcityService,
-    project: selectedProject && {
-      id: selectedProject.id,
-      name: selectedProject.name,
-      path: selectedProject.path
+    buildType: selectedBuildType && {
+      id: selectedBuildType.id,
+      name: selectedBuildType.name,
+      path: selectedBuildType.path
     },
-    buildTypes: selectedBuildTypes && selectedBuildTypes.map(it => ({
-      id: it.id,
-      name: it.name,
-      path: it.path
-    })),
-    showGreenBuilds,
-    hideChildProjects,
+    showLastSuccessful,
+    showLastPinned,
     refreshPeriod
   });
   await dispatch(applyConfiguration());
   await dispatch(closeConfiguration());
-  await dispatch(reloadStatuses());
+  await dispatch(reloadArtifacts());
 };
 
 export const cancelConfiguration = () => async (dispatch, getState, {dashboardApi}) => {
@@ -200,31 +153,29 @@ export const cancelConfiguration = () => async (dispatch, getState, {dashboardAp
 export const initWidget = () => async (dispatch, getState, {dashboardApi, registerWidgetApi}) => {
   registerWidgetApi({
     onConfigure: () => dispatch(startConfiguration(false)),
-    onRefresh: () => dispatch(reloadStatuses())
+    onRefresh: () => dispatch(reloadArtifacts())
   });
   const config = await dashboardApi.readConfig();
   const {
     title,
     teamcityService,
-    project,
-    buildTypes,
-    showGreenBuilds,
-    hideChildProjects,
+    buildType,
+    showLastSuccessful,
+    showLastPinned,
     refreshPeriod
   } = config || {};
   const {result: {buildStatuses, buildPaths}} = ((await dashboardApi.readCache())) || {result: {}};
   await dispatch(setInitialSettings({
     title,
     teamcityService,
-    project,
-    buildTypes: buildTypes || [],
-    showGreenBuilds: showGreenBuilds || false,
-    hideChildProjects: hideChildProjects || false,
+    buildType,
+    showLastSuccessful: showLastSuccessful || false,
+    showLastPinned: showLastPinned || false,
     refreshPeriod,
     buildStatuses,
     buildPaths
   }));
-  await dispatch(reloadStatuses());
+  await dispatch(reloadArtifacts());
   if (!config) {
     await dispatch(startConfiguration(true));
   }

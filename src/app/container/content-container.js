@@ -6,11 +6,10 @@ import {startConfiguration} from '../redux/actions';
 const ContentContainer = connect(
   state => ({
     teamcityService: state.teamcityService,
-    project: state.project,
+    buildType: state.buildType,
     buildStatuses: state.buildStatuses,
-    buildPaths: state.buildPaths,
     buildStatusLoadErrorMessage: state.buildStatusLoadErrorMessage,
-    showGreenBuilds: state.showGreenBuilds
+    showLastSuccessful: state.showLastSuccessful
   }),
   dispatch => ({
     onConfigure: () => dispatch(startConfiguration(false))

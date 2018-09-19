@@ -2,32 +2,25 @@ import {applyMiddleware, compose, createStore} from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import {createReducer} from 'redux-act';
 
-import copyAndRemove from '../copy-and-remove';
-
 import {
   applyConfiguration,
   closeConfiguration,
-  deselectBuildType,
   failedBuildTypesLoading,
   failedStatusLoading,
-  failedProjectsLoading,
   failedTeamcityServicesLoading,
   finishedBuildTypesLoading,
   finishedStatusLoading,
-  finishedProjectsLoading,
   finishedTeamcityServicesLoading,
   openConfiguration,
   selectBuildType,
-  selectProject,
   selectTeamcityService,
   setInitialSettings,
   startedBuildTypesLoading,
   startedStatusLoading,
-  startedProjectsLoading,
   startedTeamcityServicesLoading,
-  updateHideChildProjects,
+  updateShowLastPinned,
   updateRefreshPeriod,
-  updateShowGreenBuilds,
+  updateShowLastSuccessful,
   updateTitle
 } from './actions';
 
@@ -38,10 +31,9 @@ const reduce = createReducer({
   [setInitialSettings]: (state, {
     title,
     teamcityService,
-    project,
-    buildTypes,
-    showGreenBuilds,
-    hideChildProjects,
+    buildType,
+    showLastSuccessful,
+    showLastPinned,
     refreshPeriod,
     buildStatuses,
     buildPaths
@@ -49,10 +41,9 @@ const reduce = createReducer({
     ...state,
     title,
     teamcityService,
-    project,
-    buildTypes,
-    showGreenBuilds,
-    hideChildProjects,
+    buildType,
+    showLastSuccessful,
+    showLastPinned,
     refreshPeriod: refreshPeriod || DEFAULT_PERIOD,
     buildStatuses: buildStatuses || [],
     buildPaths: buildPaths || {}
@@ -65,10 +56,9 @@ const reduce = createReducer({
       title: state.title,
       refreshPeriod: state.refreshPeriod,
       selectedTeamcityService: state.teamcityService,
-      selectedProject: state.project,
-      selectedBuildTypes: state.buildTypes || [],
-      showGreenBuilds: state.showGreenBuilds,
-      hideChildProjects: state.hideChildProjects,
+      selectedBuildType: state.buildType,
+      showLastSuccessful: state.showLastSuccessful,
+      showLastPinned: state.showLastPinned,
 
       isInitialConfiguration
     }
@@ -113,41 +103,6 @@ const reduce = createReducer({
       selectedTeamcityService: selectedService
     }
   }),
-  [startedProjectsLoading]: state => ({
-    ...state,
-    configuration: {
-      ...state.configuration,
-      isLoadingProjects: true
-    }
-  }),
-  [finishedProjectsLoading]: (state, projects) => ({
-    ...state,
-    configuration: {
-      ...state.configuration,
-      isLoadingProjects: false,
-      projects,
-      projectLoadErrorMessage: null
-    }
-  }),
-  [failedProjectsLoading]: (state, projectLoadErrorMessage) => ({
-    ...state,
-    configuration: {
-      ...state.configuration,
-      isLoadingProjects: false,
-      projects: [],
-      projectLoadErrorMessage
-    }
-  }),
-  [selectProject]: (state, selectedProject) => ({
-    ...state,
-    configuration: {
-      ...state.configuration,
-      selectedProject,
-      projectsAndBuildTypes: [],
-      selectedBuildTypes: [],
-      buildTypeLoadErrorMessage: null
-    }
-  }),
   [startedBuildTypesLoading]: state => ({
     ...state,
     configuration: {
@@ -168,7 +123,7 @@ const reduce = createReducer({
     ...state,
     configuration: {
       ...state.configuration,
-      isLoadingProjects: false,
+      isLoadingBuildTypes: false,
       projects: [],
       buildTypeLoadErrorMessage
     }
@@ -177,35 +132,21 @@ const reduce = createReducer({
     ...state,
     configuration: {
       ...state.configuration,
-      selectedBuildTypes: [
-        ...state.configuration.selectedBuildTypes,
-        selectedBuildType
-      ]
+      selectedBuildType
     }
   }),
-  [deselectBuildType]: (state, unselectedBuildType) => ({
+  [updateShowLastSuccessful]: (state, showLastSuccessful) => ({
     ...state,
     configuration: {
       ...state.configuration,
-      selectedBuildTypes: copyAndRemove(
-        state.configuration.selectedBuildTypes,
-        unselectedBuildType,
-        (a, b) => a.id === b.id
-      )
+      showLastSuccessful
     }
   }),
-  [updateShowGreenBuilds]: (state, showGreenBuilds) => ({
+  [updateShowLastPinned]: (state, showLastPinned) => ({
     ...state,
     configuration: {
       ...state.configuration,
-      showGreenBuilds
-    }
-  }),
-  [updateHideChildProjects]: (state, hideChildProjects) => ({
-    ...state,
-    configuration: {
-      ...state.configuration,
-      hideChildProjects
+      showLastPinned
     }
   }),
   [updateRefreshPeriod]: (state, refreshPeriod) => ({
@@ -220,10 +161,9 @@ const reduce = createReducer({
     refreshPeriod: state.configuration.refreshPeriod,
     title: state.configuration.title,
     teamcityService: state.configuration.selectedTeamcityService,
-    project: state.configuration.selectedProject,
-    buildTypes: state.configuration.selectedBuildTypes,
-    showGreenBuilds: state.configuration.showGreenBuilds,
-    hideChildProjects: state.configuration.hideChildProjects
+    buildType: state.configuration.selectedBuildType,
+    showLastSuccessful: state.configuration.showLastSuccessful,
+    showLastPinned: state.configuration.showLastPinned
   }),
   [closeConfiguration]: state => ({
     ...state,
@@ -251,10 +191,9 @@ const reduce = createReducer({
 }, {
   title: null,
   teamcityService: {},
-  project: null,
-  buildTypes: [],
-  showGreenBuilds: false,
-  hideChildProjects: false,
+  buildType: null,
+  showLastSuccessful: false,
+  showLastPinned: false,
   refreshPeriod: DEFAULT_PERIOD,
 
   buildStatuses: [],
@@ -275,18 +214,13 @@ const reduce = createReducer({
     selectedTeamcityService: null,
     serviceLoadErrorMessage: null,
 
-    projects: [],
-    isLoadingProjects: false,
-    selectedProject: null,
-    projectLoadErrorMessage: null,
-
     projectsAndBuildTypes: [],
     isLoadingBuildTypes: false,
-    selectedBuildTypes: [],
+    selectedBuildType: [],
     buildTypeLoadErrorMessage: null,
 
-    showGreenBuilds: false,
-    hideChildProjects: false
+    showLastSuccessful: false,
+    showLastPinned: false
   }
 });
 

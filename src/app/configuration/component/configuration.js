@@ -13,14 +13,13 @@ const Configuration = (
     refreshPeriodControl,
     titleInput,
     serviceSelect,
-    projectSelect,
     configurationSelect,
 
-    showGreenBuilds,
-    onShowGreenBuildsChange,
+    showLastSuccessful,
+    onShowLastSuccessfulChange,
 
-    hideChildProjects,
-    onHideChildProjectsChange,
+    showLastPinned,
+    onShowLastPinnedChange,
 
     onSave,
     onCancel
@@ -41,33 +40,29 @@ const Configuration = (
       {serviceSelect}
     </div>
 
-    <div className={styles.container} data-test="project-select">
-      {projectSelect}
-    </div>
-
     <div className={styles.container} data-test="configuration-select">
       {configurationSelect}
     </div>
 
     <div
       className={classNames(styles.control, styles.controlFirst)}
-      data-test="show-green-builds"
+      data-test="show-last-successful"
     >
       <Checkbox
-        label={i18n('Show green builds')}
-        checked={showGreenBuilds}
-        onChange={onShowGreenBuildsChange}
+        label={i18n('Show last successful build')}
+        checked={showLastSuccessful}
+        onChange={onShowLastSuccessfulChange}
       />
     </div>
 
     <div
       className={styles.control}
-      data-test="hide-child-projects"
+      data-test="hide-last-pinned"
     >
       <Checkbox
-        label={i18n('Hide child projects')}
-        checked={hideChildProjects}
-        onChange={onHideChildProjectsChange}
+        label={i18n('Show last pinned build')}
+        checked={showLastPinned}
+        onChange={onShowLastPinnedChange}
       />
     </div>
   </ConfigurationForm>
@@ -77,14 +72,13 @@ Configuration.propTypes = {
   refreshPeriodControl: PropTypes.node.isRequired,
   titleInput: PropTypes.node.isRequired,
   serviceSelect: PropTypes.node.isRequired,
-  projectSelect: PropTypes.node.isRequired,
   configurationSelect: PropTypes.node.isRequired,
 
-  showGreenBuilds: PropTypes.bool.isRequired,
-  onShowGreenBuildsChange: PropTypes.func.isRequired,
+  showLastSuccessful: PropTypes.bool.isRequired,
+  onShowLastSuccessfulChange: PropTypes.func.isRequired,
 
-  hideChildProjects: PropTypes.bool.isRequired,
-  onHideChildProjectsChange: PropTypes.func.isRequired,
+  showLastPinned: PropTypes.bool.isRequired,
+  onShowLastPinnedChange: PropTypes.func.isRequired,
 
   onSave: PropTypes.func.isRequired,
   onCancel: PropTypes.func.isRequired

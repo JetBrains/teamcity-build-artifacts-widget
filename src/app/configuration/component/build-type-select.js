@@ -15,33 +15,21 @@ function buildType2Item(projectOrBuildType) {
   };
 }
 
-/**
- * Checks if the project or buildType matches the query
- *
- * @param {TeamcityBuildType|TeamcityProject} projectOrBuildType — configuration to test
- * @param {?string} query — query to fulfill
- * @returns {boolean} — if the configuration matches the query
- */
 function isMatching(projectOrBuildType, query) {
   return !query ||
     query === '' ||
     projectOrBuildType.path.toLowerCase().includes(query.toLowerCase());
 }
 
-/**
- * Recursive search if any child satisfies query
- * @param {(TeamcityProject|TeamcityBuildType)[]} projectOrBuildTypeList - array of projects or build types
- * @param {string} query - query to fulfill
- * @returns {boolean} - satisfies or not
- */
 function anyIsMatching(projectOrBuildTypeList, query) {
   return projectOrBuildTypeList.some(it =>
     isMatching(it, query) ||
-    (it.children ? anyIsMatching(it.children, query) : false));
+    (it.children && anyIsMatching(it.children, query)) ||
+    (it.buildTypes && anyIsMatching(it.buildTypes, query)));
 }
 
 const filter = {
-  placeholder: i18n('Filter projects'),
+  placeholder: i18n('Filter projects and build configurations'),
   fn: ({payload}, query) => !query || anyIsMatching([payload], query.replace(/\s*((::\s*)|(:$))/g, ' :: '))
 };
 
@@ -50,48 +38,46 @@ const BuildTypeSelect =
     {
       isLoading,
       isDisabled,
-      selectedBuildTypes,
+      selectedBuildType,
       projectAndBuildTypeList,
       loadError,
       onBuildTypeSelect,
-      onBuildTypeDeselect,
       onOpen
     }
   ) => (
     <Select
       selectedLabel={i18n('Build configurations')}
       label={i18n('All build configurations')}
-      multiple={true}
+      multiple={false}
       loading={isLoading}
       disabled={isDisabled}
       filter={filter}
-      selected={selectedBuildTypes.map(buildType2Item)}
+      selected={selectedBuildType && buildType2Item(selectedBuildType)}
       size={Select.Size.FULL}
       minWidth={MinWidth.TARGET}
       data={(projectAndBuildTypeList || []).map(buildType2Item)}
       notFoundMessage={loadError}
       onSelect={onBuildTypeSelect}
-      onDeselect={onBuildTypeDeselect}
       onOpen={onOpen}
     />
   );
 
-const BUILD_TYPE_PROPS = {
+const TREE_NODE_PROPS = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
   level: PropTypes.number,
-  parent: PropTypes.object
+  parent: PropTypes.object,
+  isBuildType: PropTypes.bool
 };
 
 BuildTypeSelect.propTypes = {
   isLoading: PropTypes.bool,
   isDisabled: PropTypes.bool,
-  selectedBuildTypes: PropTypes.arrayOf(PropTypes.shape(BUILD_TYPE_PROPS)),
-  projectAndBuildTypeList: PropTypes.arrayOf(PropTypes.shape(BUILD_TYPE_PROPS)),
+  selectedBuildType: PropTypes.shape(TREE_NODE_PROPS),
+  projectAndBuildTypeList: PropTypes.arrayOf(PropTypes.shape(TREE_NODE_PROPS)),
   loadError: PropTypes.string,
   onBuildTypeSelect: PropTypes.func.isRequired,
-  onBuildTypeDeselect: PropTypes.func.isRequired,
   onOpen: PropTypes.func.isRequired
 };
 
