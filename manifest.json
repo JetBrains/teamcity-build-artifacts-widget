@@ -1,0 +1,11 @@
+{
+  "key": "build-artifacts",
+  "name": "Build Artifacts",
+  "version": "1.0.0",
+  "description": "Hub dashboard widget to list downloadable artifacts of a TeamCity configurations",
+  "author": "Hub Team",
+  "products": {
+    "Hub": "2018.2",
+    "YouTrack": "2018.2"
+  }
+}
