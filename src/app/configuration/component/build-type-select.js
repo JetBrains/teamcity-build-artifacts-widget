@@ -54,8 +54,8 @@ const BuildTypeSelect =
     }
   ) => (
     <Select
-      selectedLabel={i18n('Build configurations')}
-      label={i18n('All build configurations')}
+      selectedLabel={i18n('Build configuration')}
+      label={i18n('Build configuration')}
       multiple={false}
       loading={isLoading}
       disabled={isDisabled}
