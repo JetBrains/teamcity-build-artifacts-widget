@@ -1,0 +1,147 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: youtrackjetbrains\n"
+"Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: youtrackjetbrains\n"
+"X-Crowdin-Language: ru\n"
+"X-Crowdin-File: /widgets/teamcity-project-status-widget/default.pot\n"
+"Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
+"Language-Team: Russian\n"
+"Language: ru_RU\n"
+"PO-Revision-Date: 2018-09-19 12:57\n"
+
+#: src/app/configuration/component/build-type-select.js:63
+msgid "All build configurations"
+msgstr ""
+
+#: src/app/build-status.js:54
+msgid "Assigned by"
+msgstr ""
+
+#: src/app/build-status.js:65
+msgid "Automatically when fixed"
+msgstr ""
+
+#: src/app/configuration/component/build-type-select.js:62
+msgid "Build configurations"
+msgstr ""
+
+#: src/app/configuration/component/configuration.js:33
+msgid "Cancel"
+msgstr ""
+
+#: src/app/content.js:49
+msgid "Cannot load build statuses"
+msgstr ""
+
+#: src/app/build-status.js:68
+msgid "Comment"
+msgstr ""
+
+#: src/app/configuration/component/build-type-select.js:44
+#: src/app/configuration/component/project-select.js:48
+msgid "Filter projects"
+msgstr ""
+
+#: src/app/configuration/component/configuration.js:68
+msgid "Hide child projects"
+msgstr ""
+
+#: src/app/build-status.js:50
+msgid "Investigator"
+msgstr ""
+
+#: src/app/build-status.js:89
+msgid "Is being investigated by: {{ user }}"
+msgstr ""
+
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:90
+msgid "January|February|March|April|May|June|July|August|September|October|November|December"
+msgstr ""
+
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:89
+msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
+msgstr ""
+
+#: src/app/build-status.js:64
+msgid "Manually"
+msgstr ""
+
+#: src/app/content.js:58
+msgid "No failed builds"
+msgstr ""
+
+#: src/app/configuration/container/title-input-container.js:11
+msgid "Optional title"
+msgstr ""
+
+#: src/app/configuration/component/project-select.js:55
+#: src/app/configuration/component/project-select.js:56
+msgid "Project"
+msgstr ""
+
+#: src/app/build-status.js:62
+msgid "Resolve"
+msgstr ""
+
+#: src/app/configuration/component/configuration.js:30
+msgid "Save"
+msgstr ""
+
+#: src/app/content.js:41
+msgid "Set up..."
+msgstr ""
+
+#: src/app/configuration/component/configuration.js:57
+msgid "Show green builds"
+msgstr ""
+
+#: src/app/build-status.js:58
+msgid "Since"
+msgstr ""
+
+#: src/app/container/title-container.js:23
+#: src/app/container/title-container.js:32
+msgid "Status"
+msgstr ""
+
+#: src/app/container/title-container.js:31
+msgid "Status: {{ project }}"
+msgstr ""
+
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:88
+msgid "Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday"
+msgstr ""
+
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:87
+msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
+msgstr ""
+
+#: src/app/configuration/container/service-select-container.js:11
+#: src/app/configuration/container/service-select-container.js:13
+msgid "TeamCity server"
+msgstr ""
+
+#: src/app/configuration/container/refresh-period-container.js:11
+msgid "Widget refreshes every minute"
+msgstr ""
+
+#: src/app/configuration/container/refresh-period-container.js:12
+msgid "Widget refreshes every {{minutes}} minutes"
+msgstr ""
+
+#: src/app/content.js:39
+msgid "Widget setup is not finished yet."
+msgstr ""
+
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:91
+msgid "am|pm"
+msgstr ""
+
+#: src/app/configuration/container/refresh-period-container.js:8
+msgid "{{minutes}} min"
+msgstr ""
+

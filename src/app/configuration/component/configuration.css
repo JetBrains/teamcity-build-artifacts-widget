@@ -1,0 +1,16 @@
+@value unit from "@jetbrains/ring-ui/components/global/global.css";
+
+.control {
+  line-height: 24px;
+}
+
+.controlFirst {
+  padding-top: calc(unit * 2);
+}
+
+.container {
+  box-sizing: border-box;
+
+  min-height: calc(unit * 8);
+  padding-top: calc(unit * 2);
+}
