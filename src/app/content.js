@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import prettyBytes from 'pretty-bytes';
 
 import Link from '@jetbrains/ring-ui/components/link/link';
+import {FileIcon, FolderIcon} from '@jetbrains/ring-ui/components/icon/icons';
+
 import EmptyWidget, {EmptyWidgetFaces} from '@jetbrains/hub-widget-ui/dist/empty-widget';
 import {i18n} from 'hub-dashboard-addons/dist/localization';
 
@@ -20,6 +22,28 @@ function WidgetContent({children, testKey}) {
 WidgetContent.propTypes = {
   testKey: PropTypes.string,
   children: PropTypes.node
+};
+
+const Artifacts = ({artifacts}) => (
+  <div>
+    {artifacts.map(artifact => {
+      const isFile = artifact.size !== undefined;
+      const ArtifactIcon = isFile ? FileIcon : FolderIcon;
+
+      return (
+        <div key={artifact.name}>
+          <ArtifactIcon className={styles.artifactIcon} size={16} color={'#ddd'}/>
+
+          <Link href={artifact.href}>{artifact.name}</Link>
+          {isFile && <span className={styles.bytes}>{prettyBytes(artifact.size)}</span>}
+        </div>
+      );
+    })}
+  </div>
+);
+
+Artifacts.propTypes = {
+  artifacts: PropTypes.array
 };
 
 const Content = (
@@ -60,12 +84,7 @@ const Content = (
   } else {
     return (
       <WidgetContent testKey={'widget-build-list'}>
-        {artifacts.map(artifact => (
-          <div key={artifact.name}>
-            <Link href={artifact.href}>{artifact.name}</Link>
-            {artifact.size && <span className={styles.bytes}>{prettyBytes(artifact.size)}</span>}
-          </div>
-        ))}
+        <Artifacts artifacts={artifacts}/>
       </WidgetContent>
     );
   }

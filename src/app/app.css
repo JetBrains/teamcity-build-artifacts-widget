@@ -20,3 +20,11 @@
 
   color: var(--ring-hint-color);
 }
+
+.artifactIcon {
+  margin-right: calc(unit / 2);
+
+  vertical-align: 1px;
+
+  color: var(--ring-line-color);
+}
