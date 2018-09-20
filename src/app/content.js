@@ -54,7 +54,7 @@ const Content = (
   } else if (!artifacts.length) {
     return (
       <WidgetContent testKey={'widget-no-builds'}>
-        <EmptyWidget face={EmptyWidgetFaces.JOY}>{i18n('There is no artifacts for this build')}</EmptyWidget>
+        <EmptyWidget face={EmptyWidgetFaces.JOY}>{i18n('This build doesn’t contain any artifacts')}</EmptyWidget>
       </WidgetContent>
     );
   } else {
