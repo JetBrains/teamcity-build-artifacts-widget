@@ -12,3 +12,11 @@
 .widget {
   composes: font from "@jetbrains/ring-ui/components/global/global.css";
 }
+
+.bytes {
+  display: inline-block;
+
+  margin-left: unit;
+
+  color: var(--ring-hint-color);
+}

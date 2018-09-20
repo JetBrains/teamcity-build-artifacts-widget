@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import prettyBytes from 'pretty-bytes';
+
 import Link from '@jetbrains/ring-ui/components/link/link';
 import EmptyWidget, {EmptyWidgetFaces} from '@jetbrains/hub-widget-ui/dist/empty-widget';
 import {i18n} from 'hub-dashboard-addons/dist/localization';
@@ -43,7 +45,7 @@ const Content = (
     return (
       <WidgetContent testKey={'widget-load-error'}>
         <EmptyWidget face={EmptyWidgetFaces.ERROR}>
-          {i18n('Cannot load build statuses')}
+          {i18n('Cannot load build artifacts')}
           <br/>
           {artifactsLoadErrorMessage}
         </EmptyWidget>
@@ -52,13 +54,18 @@ const Content = (
   } else if (!artifacts.length) {
     return (
       <WidgetContent testKey={'widget-no-builds'}>
-        <EmptyWidget face={EmptyWidgetFaces.HAPPY}>{i18n('No failed builds')}</EmptyWidget>
+        <EmptyWidget face={EmptyWidgetFaces.JOY}>{i18n('There is no artifacts for this build')}</EmptyWidget>
       </WidgetContent>
     );
   } else {
     return (
       <WidgetContent testKey={'widget-build-list'}>
-        {JSON.stringify(artifacts)}
+        {artifacts.map(artifact => (
+          <div key={artifact.name}>
+            <Link href={artifact.href}>{artifact.name}</Link>
+            <span className={styles.bytes}>{prettyBytes(artifact.size)}</span>
+          </div>
+        ))}
       </WidgetContent>
     );
   }
