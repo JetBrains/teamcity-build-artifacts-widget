@@ -63,7 +63,7 @@ const Content = (
         {artifacts.map(artifact => (
           <div key={artifact.name}>
             <Link href={artifact.href}>{artifact.name}</Link>
-            <span className={styles.bytes}>{prettyBytes(artifact.size)}</span>
+            {artifact.size && <span className={styles.bytes}>{prettyBytes(artifact.size)}</span>}
           </div>
         ))}
       </WidgetContent>
