@@ -10,9 +10,11 @@ import {
 } from '@jetbrains/ring-ui/components/icon';
 import Link from '@jetbrains/ring-ui/components/link/link';
 
-import {reloadArtifacts} from '../redux/actions';
+import {loadArtifacts} from '../redux/actions';
 
 import styles from '../app.css';
+
+import Artifacts from './Artifacts';
 
 class FolderArtifact extends React.Component {
   static propTypes = {
@@ -29,10 +31,7 @@ class FolderArtifact extends React.Component {
     const {opened} = this.state;
 
     if (!artifact.artifacts) {
-      console.log('loading', artifact.name);
-      console.log(this.props.onLoadMore(artifact.name));
-    } else {
-      console.log('just show');
+      this.props.onLoadMore(artifact.children.href.split('/children')[1]);
     }
 
     this.setState({opened: !opened});
@@ -40,15 +39,17 @@ class FolderArtifact extends React.Component {
 
   render() {
     const {artifact} = this.props;
+    const {opened} = this.state;
 
-    const Icon = this.state.opened ? ChevronDownIcon : ChevronRightIcon;
+    const Icon = opened ? ChevronDownIcon : ChevronRightIcon;
 
     return (
-      <span onClick={this.loadMore}>
+      <div onClick={this.loadMore}>
         <Icon className={styles.artifactIcon} size={16} color={'#ddd'}/>
         <FolderIcon className={styles.artifactIcon} size={16} color={'#ddd'}/>
         <Link>{artifact.name}</Link>
-      </span>
+        {opened && <Artifacts padded artifacts={artifact.artifacts}/>}
+      </div>
     );
   }
 }
@@ -56,6 +57,6 @@ class FolderArtifact extends React.Component {
 export default connect(
   () => ({}),
   dispatch => ({
-    onLoadMore: path => dispatch(reloadArtifacts(path))
+    onLoadMore: path => dispatch(loadArtifacts(path))
   })
 )(FolderArtifact);

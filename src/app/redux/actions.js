@@ -1,4 +1,5 @@
 import {createAction} from 'redux-act';
+import clone from 'clone';
 
 import TeamcityService from '../teamcity/teamcity-service';
 
@@ -46,20 +47,21 @@ export const failedStatusLoading =
   createAction('Failed to load project builds statuses');
 
 // eslint-disable-next-line complexity
-export const reloadArtifacts = (path = '') => async (dispatch, getState, {dashboardApi}) => {
+export const loadArtifacts = (path = '') => async (dispatch, getState, {dashboardApi}) => {
   const {
     teamcityService,
     buildType,
     showLastSuccessful,
     showLastPinned,
-    tags
+    tags,
+    artifacts: storedArtifacts
   } = getState();
   if (teamcityService && buildType) {
     await dispatch(startedStatusLoading());
 
     const server = new TeamcityService(dashboardApi);
     try {
-      const artifacts = await server.getArtifacts(
+      const loadedArtifacts = await server.getArtifacts(
         teamcityService,
         buildType,
         showLastSuccessful,
@@ -67,6 +69,24 @@ export const reloadArtifacts = (path = '') => async (dispatch, getState, {dashbo
         tags,
         path
       );
+
+      let artifacts;
+
+      if (path === '') {
+        artifacts = loadedArtifacts;
+      } else {
+        const parts = path.split('/');
+        artifacts = clone(storedArtifacts);
+
+        let cursor = artifacts;
+
+        parts.forEach(part => {
+          cursor = artifacts.find(a => a.name === part);
+        });
+
+        cursor.artifacts = loadedArtifacts;
+      }
+
       await dashboardApi.storeCache({artifacts});
       await dispatch(finishedStatusLoading(artifacts));
     } catch (e) {
@@ -146,7 +166,7 @@ export const saveConfiguration = () => async (dispatch, getState, {dashboardApi}
   });
   await dispatch(applyConfiguration());
   await dispatch(closeConfiguration());
-  await dispatch(reloadArtifacts());
+  await dispatch(loadArtifacts());
 };
 
 export const cancelConfiguration = () => async (dispatch, getState, {dashboardApi}) => {
@@ -160,7 +180,7 @@ export const cancelConfiguration = () => async (dispatch, getState, {dashboardAp
 export const initWidget = () => async (dispatch, getState, {dashboardApi, registerWidgetApi}) => {
   registerWidgetApi({
     onConfigure: () => dispatch(startConfiguration(false)),
-    onRefresh: () => dispatch(reloadArtifacts())
+    onRefresh: () => dispatch(loadArtifacts())
   });
   const config = await dashboardApi.readConfig();
   const {
@@ -183,7 +203,7 @@ export const initWidget = () => async (dispatch, getState, {dashboardApi, regist
     refreshPeriod,
     artifacts
   }));
-  await dispatch(reloadArtifacts());
+  await dispatch(loadArtifacts());
   if (!config) {
     await dispatch(startConfiguration(true));
   }

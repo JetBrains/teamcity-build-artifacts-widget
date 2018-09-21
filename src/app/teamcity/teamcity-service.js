@@ -40,7 +40,7 @@ export default class TeamcityService {
       join(',');
     return (await this._fetchTeamcity(
       teamcityService,
-      `builds/${locator}/artifacts/children/${path}`
+      `builds/${locator}/artifacts/children${path}`
     )).file;
   }
 
