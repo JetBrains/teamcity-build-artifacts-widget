@@ -75,13 +75,13 @@ export const loadArtifacts = (path = '') => async (dispatch, getState, {dashboar
       if (path === '') {
         artifacts = loadedArtifacts;
       } else {
-        const parts = path.split('/');
+        const parts = path.split('/').filter(s => s);
         artifacts = clone(storedArtifacts);
 
-        let cursor = artifacts;
+        let cursor = {artifacts};
 
         parts.forEach(part => {
-          cursor = artifacts.find(a => a.name === part);
+          cursor = cursor.artifacts.find(a => a.name === part);
         });
 
         cursor.artifacts = loadedArtifacts;

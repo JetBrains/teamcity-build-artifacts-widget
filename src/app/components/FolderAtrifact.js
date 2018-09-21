@@ -31,7 +31,8 @@ class FolderArtifact extends React.Component {
     const {opened} = this.state;
 
     if (!artifact.artifacts) {
-      this.props.onLoadMore(artifact.children.href.split('/children')[1]);
+      const path = artifact.children.href.split('/children')[1];
+      this.props.onLoadMore(path);
     }
 
     this.setState({opened: !opened});
@@ -44,10 +45,14 @@ class FolderArtifact extends React.Component {
     const Icon = opened ? ChevronDownIcon : ChevronRightIcon;
 
     return (
-      <div onClick={this.loadMore}>
-        <Icon className={styles.artifactIcon} size={16} color={'#ddd'}/>
-        <FolderIcon className={styles.artifactIcon} size={16} color={'#ddd'}/>
-        <Link>{artifact.name}</Link>
+      <div>
+        <span onClick={this.loadMore}>
+          <span className={styles.artifactIcon}>
+            <Icon size={16} color={'#ddd'}/>
+            <FolderIcon size={16} color={'#ddd'}/>
+          </span>
+          <Link>{artifact.name}</Link>
+        </span>
         {opened && <Artifacts padded artifacts={artifact.artifacts}/>}
       </div>
     );
