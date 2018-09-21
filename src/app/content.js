@@ -1,15 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import prettyBytes from 'pretty-bytes';
-
 import Link from '@jetbrains/ring-ui/components/link/link';
-import {FileIcon, FolderIcon} from '@jetbrains/ring-ui/components/icon/icons';
 
 import EmptyWidget, {EmptyWidgetFaces} from '@jetbrains/hub-widget-ui/dist/empty-widget';
 import {i18n} from 'hub-dashboard-addons/dist/localization';
 
 import styles from './app.css';
+import Artifacts from './components/Artifacts';
 
 function WidgetContent({children, testKey}) {
   return (
@@ -22,28 +20,6 @@ function WidgetContent({children, testKey}) {
 WidgetContent.propTypes = {
   testKey: PropTypes.string,
   children: PropTypes.node
-};
-
-const Artifacts = ({artifacts}) => (
-  <div>
-    {artifacts.map(artifact => {
-      const isFile = artifact.size !== undefined;
-      const ArtifactIcon = isFile ? FileIcon : FolderIcon;
-
-      return (
-        <div key={artifact.name}>
-          <ArtifactIcon className={styles.artifactIcon} size={16} color={'#ddd'}/>
-
-          <Link href={artifact.href}>{artifact.name}</Link>
-          {isFile && <span className={styles.bytes}>{prettyBytes(artifact.size)}</span>}
-        </div>
-      );
-    })}
-  </div>
-);
-
-Artifacts.propTypes = {
-  artifacts: PropTypes.array
 };
 
 const Content = (
@@ -78,7 +54,9 @@ const Content = (
   } else if (!artifacts.length) {
     return (
       <WidgetContent testKey={'widget-no-builds'}>
-        <EmptyWidget face={EmptyWidgetFaces.JOY}>{i18n('This build doesn’t contain any artifacts')}</EmptyWidget>
+        <EmptyWidget face={EmptyWidgetFaces.JOY}>
+          {i18n('This build doesn’t contain any artifacts')}
+        </EmptyWidget>
       </WidgetContent>
     );
   } else {

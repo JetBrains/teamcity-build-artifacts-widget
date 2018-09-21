@@ -28,3 +28,12 @@
 
   color: var(--ring-line-color);
 }
+
+.fileSpacing {
+  display: inline-block;
+
+  width: calc(unit * 2);
+
+  margin-right: calc(unit / 2);
+}
+

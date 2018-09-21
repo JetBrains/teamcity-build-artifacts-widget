@@ -46,7 +46,7 @@ export const failedStatusLoading =
   createAction('Failed to load project builds statuses');
 
 // eslint-disable-next-line complexity
-export const reloadArtifacts = () => async (dispatch, getState, {dashboardApi}) => {
+export const reloadArtifacts = (path = '') => async (dispatch, getState, {dashboardApi}) => {
   const {
     teamcityService,
     buildType,
@@ -64,7 +64,8 @@ export const reloadArtifacts = () => async (dispatch, getState, {dashboardApi}) 
         buildType,
         showLastSuccessful,
         showLastPinned,
-        tags
+        tags,
+        path
       );
       await dashboardApi.storeCache({artifacts});
       await dispatch(finishedStatusLoading(artifacts));
