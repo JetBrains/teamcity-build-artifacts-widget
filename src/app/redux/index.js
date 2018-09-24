@@ -18,6 +18,7 @@ import {
   startedBuildTypesLoading,
   startedStatusLoading,
   startedTeamcityServicesLoading,
+  updateExpandedFolders,
   updateRefreshPeriod,
   updateShowLastPinned,
   updateShowLastSuccessful,
@@ -165,6 +166,10 @@ const reduce = createReducer({
       refreshPeriod
     }
   }),
+  [updateExpandedFolders]: (state, expandedFolders) => ({
+    ...state,
+    expandedFolders
+  }),
   [applyConfiguration]: state => ({
     ...state,
     refreshPeriod: state.configuration.refreshPeriod,
@@ -208,6 +213,7 @@ const reduce = createReducer({
   refreshPeriod: DEFAULT_PERIOD,
 
   artifacts: [],
+  expandedFolders: {},
   isLoadingArtifacts: false,
   artifactsLoadErrorMessage: null,
 

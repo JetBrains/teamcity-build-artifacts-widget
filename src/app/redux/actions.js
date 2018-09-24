@@ -46,6 +46,9 @@ export const finishedStatusLoading =
 export const failedStatusLoading =
   createAction('Failed to load project builds statuses');
 
+export const updateExpandedFolders =
+  createAction('Update expanded state');
+
 // eslint-disable-next-line complexity
 export const loadArtifacts = (path = '') => async (dispatch, getState, {dashboardApi}) => {
   const {

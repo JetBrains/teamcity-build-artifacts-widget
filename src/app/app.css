@@ -41,3 +41,10 @@
   margin-left: calc(unit * 2);
 }
 
+.folderLoader {
+  margin-left: calc(unit / 2);
+}
+
+.link {
+  outline: none;
+}
