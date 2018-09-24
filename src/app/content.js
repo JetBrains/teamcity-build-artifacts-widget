@@ -24,6 +24,7 @@ WidgetContent.propTypes = {
 
 const Content = (
   {
+    isInitializing,
     teamcityService,
     buildType,
     artifacts,
@@ -31,7 +32,11 @@ const Content = (
     onConfigure
   }
 ) => {
-  if (!teamcityService || !buildType) {
+  if (isInitializing) {
+    return (
+      <WidgetContent/>
+    );
+  } else if (!teamcityService || !buildType) {
     return (
       <WidgetContent testKey={'widget-setup-pending'}>
         <span>

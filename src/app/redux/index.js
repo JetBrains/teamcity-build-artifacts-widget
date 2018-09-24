@@ -52,6 +52,7 @@ const reduce = createReducer({
   }),
   [openConfiguration]: (state, isInitialConfiguration) => ({
     ...state,
+    isInitializing: false,
     configuration: {
       ...state.configuration,
       isConfiguring: true,
@@ -204,6 +205,7 @@ const reduce = createReducer({
     artifactsLoadErrorMessage
   })
 }, {
+  isInitializing: true,
   title: null,
   teamcityService: {},
   buildType: null,

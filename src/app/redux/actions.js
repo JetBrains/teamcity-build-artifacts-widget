@@ -52,6 +52,7 @@ export const updateExpandedFolders =
 // eslint-disable-next-line complexity
 export const loadArtifacts = (path = '') => async (dispatch, getState, {dashboardApi}) => {
   const {
+    configuration: {isConfiguring},
     teamcityService,
     buildType,
     showLastSuccessful,
@@ -59,7 +60,7 @@ export const loadArtifacts = (path = '') => async (dispatch, getState, {dashboar
     tags,
     artifacts: storedArtifacts
   } = getState();
-  if (teamcityService && buildType) {
+  if (!isConfiguring && teamcityService && buildType) {
     await dispatch(startedStatusLoading());
 
     const server = new TeamcityService(dashboardApi);
