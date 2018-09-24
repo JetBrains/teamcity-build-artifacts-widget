@@ -36,29 +36,45 @@ class FolderArtifact extends React.Component {
     this.path = props.artifact.children.href.split('/children')[1];
   }
 
+  // async componentDidUpdate(prevProps) {
+  //   if (!this.props.artifact.artifacts && prevProps.artifact.artifacts) {
+  //     this.setExpandedState(FOLDER_STATE.LOADING);
+  //     await this.props.onLoadMore(this.path);
+  //     this.setExpandedState(FOLDER_STATE.EXPANDED);
+  //   }
+  // }
+
+  getExpandedState = () => this.props.expandedFolders[this.path];
+
+  setExpandedState = expandedState =>
+    this.props.updateExpanded({
+      ...this.props.expandedFolders,
+      [this.path]: expandedState
+    });
+
   toggleFolder = async () => {
-    const {artifact, expandedFolders, onLoadMore, updateExpanded} = this.props;
+    const {artifact, onLoadMore} = this.props;
+    const folderState = this.getExpandedState();
 
-    const folderState = expandedFolders[this.path];
-
-    const setExpandedState = expandedState =>
-      updateExpanded({...expandedFolders, [this.path]: expandedState});
+    if (folderState === FOLDER_STATE.LOADING) {
+      return;
+    }
 
     if (folderState === FOLDER_STATE.COLLAPSED) {
       if (!artifact.artifacts) {
-        setExpandedState(FOLDER_STATE.LOADING);
+        this.setExpandedState(FOLDER_STATE.LOADING);
         await onLoadMore(this.path);
       }
 
-      setExpandedState(FOLDER_STATE.EXPANDED);
+      this.setExpandedState(FOLDER_STATE.EXPANDED);
     } else {
-      setExpandedState(FOLDER_STATE.COLLAPSED);
+      this.setExpandedState(FOLDER_STATE.COLLAPSED);
     }
   };
 
   render() {
-    const {artifact, expandedFolders} = this.props;
-    const folderState = expandedFolders[this.path];
+    const {artifact} = this.props;
+    const folderState = this.getExpandedState();
 
     const loading = folderState === FOLDER_STATE.LOADING;
     const expanded = folderState === FOLDER_STATE.EXPANDED;
