@@ -36,14 +36,6 @@ class FolderArtifact extends React.Component {
     this.path = props.artifact.children.href.split('/children')[1];
   }
 
-  // async componentDidUpdate(prevProps) {
-  //   if (!this.props.artifact.artifacts && prevProps.artifact.artifacts) {
-  //     this.setExpandedState(FOLDER_STATE.LOADING);
-  //     await this.props.onLoadMore(this.path);
-  //     this.setExpandedState(FOLDER_STATE.EXPANDED);
-  //   }
-  // }
-
   getExpandedState = () => this.props.expandedFolders[this.path];
 
   setExpandedState = expandedState =>

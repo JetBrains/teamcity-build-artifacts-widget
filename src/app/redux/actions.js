@@ -57,6 +57,7 @@ export const loadArtifacts = (path = '') => async (dispatch, getState, {dashboar
     buildType,
     showLastSuccessful,
     showLastPinned,
+    expandedFolders,
     tags,
     artifacts: storedArtifacts
   } = getState();
@@ -65,30 +66,71 @@ export const loadArtifacts = (path = '') => async (dispatch, getState, {dashboar
 
     const server = new TeamcityService(dashboardApi);
     try {
-      const loadedArtifacts = await server.getArtifacts(
-        teamcityService,
-        buildType,
-        showLastSuccessful,
-        showLastPinned,
-        tags,
-        path
-      );
+      const getPathCombinations = loadPath => {
+        const parts = loadPath.split('/').filter(s => s);
+
+        return [
+          '',
+          ...loadPath.split('/').filter(s => s).map((p, index) => parts.slice(0, parts.length - index).join('/'))
+        ];
+      };
+
+      const getDeepNode = (objectPath, object) => {
+        if (objectPath === '') {
+          return object;
+        }
+
+        const parts = objectPath.split('/').filter(s => s);
+        let cursor = object;
+
+        parts.forEach(part => {
+          cursor = cursor && cursor.artifacts && cursor.artifacts.find(a => a.name === part);
+        });
+
+        return cursor;
+      };
+
+      const loadByPath = async (loadPath, target) => {
+        const combinations = getPathCombinations(loadPath);
+
+        for (let i = 0; i < combinations.length; i++) {
+          const leaf = combinations[i];
+
+          const node = getDeepNode(leaf, target);
+
+          if (node && !node.artifacts) {
+            node.artifacts = await server.getArtifacts(
+              teamcityService,
+              buildType,
+              showLastSuccessful,
+              showLastPinned,
+              tags,
+              `/${leaf}`
+            );
+          }
+        }
+
+        return target;
+      };
 
       let artifacts;
 
       if (path === '') {
-        artifacts = loadedArtifacts;
+        const loadedData = await loadByPath(path, {});
+
+        const expandedPaths = Object.keys(expandedFolders).filter(f => !!expandedFolders[f]);
+
+        for (let i = 0; i < expandedPaths.length; i++) {
+          await loadByPath(expandedPaths[i], loadedData);
+        }
+
+        artifacts = loadedData.artifacts;
       } else {
-        const parts = path.split('/').filter(s => s);
-        artifacts = clone(storedArtifacts);
-
-        let cursor = {artifacts};
-
-        parts.forEach(part => {
-          cursor = cursor.artifacts.find(a => a.name === part);
+        const loadedData = await loadByPath(path, {
+          artifacts: clone(storedArtifacts)
         });
 
-        cursor.artifacts = loadedArtifacts;
+        artifacts = loadedData.artifacts;
       }
 
       await dashboardApi.storeCache({artifacts});
