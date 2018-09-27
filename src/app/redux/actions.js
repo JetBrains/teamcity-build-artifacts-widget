@@ -71,7 +71,10 @@ export const loadArtifacts = (path = '') => async (dispatch, getState, {dashboar
 
         return [
           '',
-          ...loadPath.split('/').filter(s => s).map((p, index) => parts.slice(0, parts.length - index).join('/'))
+          ...loadPath.
+            split('/').
+            filter(s => s).
+            map((p, index) => parts.slice(0, parts.length - index).join('/'))
         ];
       };
 
