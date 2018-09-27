@@ -11,100 +11,100 @@ msgstr ""
 "Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2018-09-19 17:14\n"
+"PO-Revision-Date: 2018-09-27 14:19\n"
 
 #: src/app/container/title-container.js:11
 #: src/app/container/title-container.js:20
 msgid "Artifacts"
-msgstr ""
+msgstr "アーティファクト"
 
 #: src/app/container/title-container.js:19
 msgid "Artifacts: {{ buildConfiguration }}"
-msgstr ""
+msgstr "アーティファクト：{{ buildConfiguration }}"
 
 #: src/app/configuration/component/build-type-select.js:57
 #: src/app/configuration/component/build-type-select.js:58
 msgid "Build configuration"
-msgstr ""
+msgstr "ビルド構成"
 
 #: src/app/configuration/container/tags-input-container.js:11
 msgid "Build with specified tags (comma-separated)"
-msgstr ""
+msgstr "指定したタグ（カンマ区切り）でビルド"
 
 #: src/app/configuration/component/configuration.js:33
 msgid "Cancel"
-msgstr ""
+msgstr "取り消す"
 
-#: src/app/content.js:46
-msgid "Cannot load build statuses"
+#: src/app/content.js:53
+msgid "Cannot load build artifacts"
 msgstr ""
 
 #: src/app/configuration/component/build-type-select.js:40
 msgid "Filter projects and build configurations"
-msgstr ""
+msgstr "プロジェクトとビルド構成をフィルタリング"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:90
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
-msgstr ""
+msgstr "1月|2月|3月|4月|5月|6月|7月|8月|9月|10月|11月|12月"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:89
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
-msgstr ""
-
-#: src/app/content.js:55
-msgid "No failed builds"
-msgstr ""
+msgstr "1月|2月|3月|4月|5月|6月|7月|8月|9月|10月|11月|12月"
 
 #: src/app/configuration/container/title-input-container.js:11
 msgid "Optional title"
-msgstr ""
+msgstr "タイトル（省略可）"
 
 #: src/app/configuration/component/configuration.js:30
 msgid "Save"
-msgstr ""
+msgstr "保存"
 
-#: src/app/content.js:38
+#: src/app/content.js:45
 msgid "Set up..."
-msgstr ""
+msgstr "セットアップ…"
 
 #: src/app/configuration/component/configuration.js:66
 msgid "Show last pinned build"
-msgstr ""
+msgstr "最後に固定されたビルドを表示"
 
 #: src/app/configuration/component/configuration.js:55
 msgid "Show last successful build"
-msgstr ""
+msgstr "最後に成功したビルドを表示"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:88
 msgid "Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday"
-msgstr ""
+msgstr "日曜日|月曜日|火曜日|水曜日|木曜日|金曜日|土曜日"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:87
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
-msgstr ""
+msgstr "日|月|火|水|木|金|土"
 
 #: src/app/configuration/container/service-select-container.js:11
 #: src/app/configuration/container/service-select-container.js:13
 msgid "TeamCity server"
+msgstr "TeamCityサーバー"
+
+#: src/app/content.js:63
+msgid "This build doesn’t contain any artifacts"
 msgstr ""
 
 #: src/app/configuration/container/refresh-period-container.js:11
 msgid "Widget refreshes every minute"
-msgstr ""
+msgstr "ウィジェットは1分ごとに更新されます"
 
 #: src/app/configuration/container/refresh-period-container.js:12
 msgid "Widget refreshes every {{minutes}} minutes"
-msgstr ""
+msgstr "ウィジェットは{{minutes}}分ごとに更新されます"
 
-#: src/app/content.js:36
+#: src/app/content.js:43
 msgid "Widget setup is not finished yet."
-msgstr ""
+msgstr "ウィジェットのセットアップはまだ完了していません。"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:91
 msgid "am|pm"
-msgstr ""
+msgstr "am|pm"
 
 #: src/app/configuration/container/refresh-period-container.js:8
 msgid "{{minutes}} min"
-msgstr ""
+msgstr "{{minutes}} 分"
 

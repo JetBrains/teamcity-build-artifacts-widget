@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2018-09-19 17:14\n"
+"PO-Revision-Date: 2018-09-27 14:19\n"
 
 #: src/app/container/title-container.js:11
 #: src/app/container/title-container.js:20
@@ -35,8 +35,8 @@ msgstr ""
 msgid "Cancel"
 msgstr "Отмена"
 
-#: src/app/content.js:46
-msgid "Cannot load build statuses"
+#: src/app/content.js:53
+msgid "Cannot load build artifacts"
 msgstr ""
 
 #: src/app/configuration/component/build-type-select.js:40
@@ -51,10 +51,6 @@ msgstr ""
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 msgstr ""
 
-#: src/app/content.js:55
-msgid "No failed builds"
-msgstr ""
-
 #: src/app/configuration/container/title-input-container.js:11
 msgid "Optional title"
 msgstr ""
@@ -63,7 +59,7 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: src/app/content.js:38
+#: src/app/content.js:45
 msgid "Set up..."
 msgstr ""
 
@@ -88,6 +84,10 @@ msgstr ""
 msgid "TeamCity server"
 msgstr ""
 
+#: src/app/content.js:63
+msgid "This build doesn’t contain any artifacts"
+msgstr ""
+
 #: src/app/configuration/container/refresh-period-container.js:11
 msgid "Widget refreshes every minute"
 msgstr "Виджет обновляется раз в минуту"
@@ -96,7 +96,7 @@ msgstr "Виджет обновляется раз в минуту"
 msgid "Widget refreshes every {{minutes}} minutes"
 msgstr "Виджет обновляется раз в {{minutes}} мин"
 
-#: src/app/content.js:36
+#: src/app/content.js:43
 msgid "Widget setup is not finished yet."
 msgstr ""
 

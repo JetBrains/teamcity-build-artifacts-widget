@@ -11,100 +11,100 @@ msgstr ""
 "Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2018-09-19 17:14\n"
+"PO-Revision-Date: 2018-09-27 14:19\n"
 
 #: src/app/container/title-container.js:11
 #: src/app/container/title-container.js:20
 msgid "Artifacts"
-msgstr ""
+msgstr "Artefakte"
 
 #: src/app/container/title-container.js:19
 msgid "Artifacts: {{ buildConfiguration }}"
-msgstr ""
+msgstr "Artefakte: {{ buildConfiguration }}"
 
 #: src/app/configuration/component/build-type-select.js:57
 #: src/app/configuration/component/build-type-select.js:58
 msgid "Build configuration"
-msgstr ""
+msgstr "Build-Konfiguration"
 
 #: src/app/configuration/container/tags-input-container.js:11
 msgid "Build with specified tags (comma-separated)"
-msgstr ""
+msgstr "Build mit angegebenen Tags (durch Kommas getrennt)"
 
 #: src/app/configuration/component/configuration.js:33
 msgid "Cancel"
-msgstr ""
+msgstr "Abbrechen"
 
-#: src/app/content.js:46
-msgid "Cannot load build statuses"
+#: src/app/content.js:53
+msgid "Cannot load build artifacts"
 msgstr ""
 
 #: src/app/configuration/component/build-type-select.js:40
 msgid "Filter projects and build configurations"
-msgstr ""
+msgstr "Projekte und Build-Konfigurationen filtern"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:90
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
-msgstr ""
+msgstr "Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:89
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
-msgstr ""
-
-#: src/app/content.js:55
-msgid "No failed builds"
-msgstr ""
+msgstr "Jan|Feb|Mär|Apr|Mai|Jun|Jul|Aug|Sep|Okt|Nov|Dez"
 
 #: src/app/configuration/container/title-input-container.js:11
 msgid "Optional title"
-msgstr ""
+msgstr "Optionaler Titel"
 
 #: src/app/configuration/component/configuration.js:30
 msgid "Save"
-msgstr ""
+msgstr "Speichern"
 
-#: src/app/content.js:38
+#: src/app/content.js:45
 msgid "Set up..."
-msgstr ""
+msgstr "Einrichten..."
 
 #: src/app/configuration/component/configuration.js:66
 msgid "Show last pinned build"
-msgstr ""
+msgstr "Letzten angepinnten Build anzeigen"
 
 #: src/app/configuration/component/configuration.js:55
 msgid "Show last successful build"
-msgstr ""
+msgstr "Letzten erfolgreichen Build anzeigen"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:88
 msgid "Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday"
-msgstr ""
+msgstr "Sonntag|Montag|Dienstag|Mittwoch|Donnerstag|Freitag|Samstag"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:87
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
-msgstr ""
+msgstr "So|Mo|Di|Mi|Do|Fr|Sa"
 
 #: src/app/configuration/container/service-select-container.js:11
 #: src/app/configuration/container/service-select-container.js:13
 msgid "TeamCity server"
+msgstr "TeamCity-Server"
+
+#: src/app/content.js:63
+msgid "This build doesn’t contain any artifacts"
 msgstr ""
 
 #: src/app/configuration/container/refresh-period-container.js:11
 msgid "Widget refreshes every minute"
-msgstr ""
+msgstr "Widget wird jede Minute aktualisiert"
 
 #: src/app/configuration/container/refresh-period-container.js:12
 msgid "Widget refreshes every {{minutes}} minutes"
-msgstr ""
+msgstr "Widget wird alle {{minutes}} Minuten aktualisiert"
 
-#: src/app/content.js:36
+#: src/app/content.js:43
 msgid "Widget setup is not finished yet."
-msgstr ""
+msgstr "Die Widget-Einrichtung ist noch nicht beendet."
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:91
 msgid "am|pm"
-msgstr ""
+msgstr "AM|PM"
 
 #: src/app/configuration/container/refresh-period-container.js:8
 msgid "{{minutes}} min"
-msgstr ""
+msgstr "{{minutes}} Minuten"
 
