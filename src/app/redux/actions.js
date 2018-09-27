@@ -212,6 +212,7 @@ export const saveConfiguration = () => async (dispatch, getState, {dashboardApi}
   });
   await dispatch(applyConfiguration());
   await dispatch(closeConfiguration());
+  await dispatch(updateExpandedFolders({}));
   await dispatch(loadArtifacts());
 };
 
