@@ -19,7 +19,7 @@ export default class FileArtifact extends React.Component {
     return (
       <span>
         <span className={styles.fileSpacing}/>
-        <FileIcon className={styles.artifactIcon} size={16} color={'#ddd'}/>
+        <FileIcon className={styles.artifactIcon} size={16}/>
         <Link href={artifact.href}>{artifact.name}</Link>
         <span className={styles.bytes}>{prettyBytes(artifact.size)}</span>
       </span>

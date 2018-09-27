@@ -71,14 +71,16 @@ class FolderArtifact extends React.Component {
     const loading = folderState === FOLDER_STATE.LOADING;
     const expanded = folderState === FOLDER_STATE.EXPANDED;
 
-    const Icon = expanded ? ChevronDownIcon : ChevronRightIcon;
+    const ExpanderIcon = expanded ? ChevronDownIcon : ChevronRightIcon;
 
     return (
       <div>
         <span onClick={this.toggleFolder}>
+          <span className={styles.folderExpanderIcon}>
+            <ExpanderIcon size={16}/>
+          </span>
           <span className={styles.artifactIcon}>
-            <Icon size={16} color={'#ddd'}/>
-            <FolderIcon size={16} color={'#ddd'}/>
+            <FolderIcon size={16}/>
           </span>
           <Link className={styles.link}>{artifact.name}</Link>
         </span>

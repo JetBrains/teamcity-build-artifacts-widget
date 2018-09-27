@@ -22,9 +22,17 @@
 }
 
 .artifactIcon {
-  margin-right: calc(unit / 2);
+  margin-right: unit;
 
   vertical-align: 1px;
+
+  color: var(--ring-line-color);
+}
+
+.folderExpanderIcon {
+  margin-right: calc(unit / 2);
+
+  cursor: pointer;
 
   color: var(--ring-line-color);
 }
