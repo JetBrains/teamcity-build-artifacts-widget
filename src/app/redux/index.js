@@ -41,6 +41,7 @@ const reduce = createReducer({
     artifacts
   }) => ({
     ...state,
+    isInitializing: false,
     title,
     teamcityService,
     buildType,
@@ -52,7 +53,6 @@ const reduce = createReducer({
   }),
   [openConfiguration]: (state, isInitialConfiguration) => ({
     ...state,
-    isInitializing: false,
     configuration: {
       ...state.configuration,
       isConfiguring: true,
