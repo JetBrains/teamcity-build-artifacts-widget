@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2018-09-27 14:19\n"
+"PO-Revision-Date: 2018-09-28 09:26\n"
 
 #: src/app/container/title-container.js:11
 #: src/app/container/title-container.js:20
@@ -37,7 +37,7 @@ msgstr "Abbrechen"
 
 #: src/app/content.js:53
 msgid "Cannot load build artifacts"
-msgstr ""
+msgstr "Build-Artefakte können nicht geladen werden"
 
 #: src/app/configuration/component/build-type-select.js:40
 msgid "Filter projects and build configurations"
@@ -86,7 +86,7 @@ msgstr "TeamCity-Server"
 
 #: src/app/content.js:63
 msgid "This build doesn’t contain any artifacts"
-msgstr ""
+msgstr "Dieser Build enthält keine Artefakte"
 
 #: src/app/configuration/container/refresh-period-container.js:11
 msgid "Widget refreshes every minute"
