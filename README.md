@@ -47,7 +47,7 @@ We appreciate all kinds of feedback. Please feel free to send a pull request or 
 Thanks goes to these rockstars ([emoji key][emojis]):
 
 | [<img src="https://avatars1.githubusercontent.com/u/92777?v=4" width="100px;"/><br /><sub><b>Maxim Mazin</b></sub>](https://github.com/mazine)<br />[💻](https://github.com/JetBrains/teamcity-build-artifacts-widget/commits?author=mazine "Code") | [<img src="https://avatars2.githubusercontent.com/u/4318513?v=4" width="100px;"/><br /><sub><b>Andrey Skladchikov</b></sub>](https://github.com/huston007)<br />[💻](https://github.com/JetBrains/teamcity-build-artifacts-widget/commits?author=huston007 "Code") | [<img src="https://avatars0.githubusercontent.com/u/2738412?s=400&v=4" width="100px;"/><br /><sub><b>Ekaterina Zaikina</b></sub>](https://github.com/katriyna)<br />[💻](https://github.com/JetBrains/teamcity-build-artifacts-widget/commits?author=katriyna "Code") | [<img src="https://avatars3.githubusercontent.com/u/1948936?s=460&v=4" width="100px;"/><br /><sub><b>Maxim Erekhinskiy</b></sub>](https://github.com/nightflash)<br />[💻](https://github.com/JetBrains/teamcity-build-artifacts-widget/commits?author=nightflah "Code") |
-| :---: | :---: | :---: |
+| :---: | :---: | :---: | :---: |
 
 This project follows the [all-contributors][all-contributors] specification.
 Contributions of any kind are welcome!
