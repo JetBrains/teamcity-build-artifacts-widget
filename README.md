@@ -1,4 +1,4 @@
-# TeamCity Project Artifacts Widget
+# TeamCity Build Artifacts Widget
 [![Build Status][ci-img]][ci-bt] [![JetBrains team project](http://jb.gg/badges/team.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
 
 This widget displays a tree view of build artifacts from TeamCity. This widget can be added to dashboards and project overview pages in a Hub installation.
