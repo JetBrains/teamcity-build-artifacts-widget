@@ -136,8 +136,15 @@ export const loadArtifacts = (path = '') => async (dispatch, getState, {dashboar
         artifacts = loadedData.artifacts;
       }
 
-      await dashboardApi.storeCache({artifacts});
-      await dispatch(finishedStatusLoading(artifacts));
+      const buildInfo = await server.getBuildInfo(
+        teamcityService,
+        buildType,
+        showLastSuccessful,
+        showLastPinned,
+        tags
+      );
+      await dashboardApi.storeCache({artifacts, buildInfo});
+      await dispatch(finishedStatusLoading({artifacts, buildInfo}));
     } catch (e) {
       const error = (e.data && e.data.message) || e.message || e.toString();
       await dispatch(failedStatusLoading(error));
@@ -242,7 +249,7 @@ export const initWidget = () => async (dispatch, getState, {dashboardApi, regist
     tags,
     refreshPeriod
   } = config || {};
-  const {result: {artifacts}} = ((await dashboardApi.readCache())) || {result: {}};
+  const {result: {artifacts, buildInfo}} = ((await dashboardApi.readCache())) || {result: {}};
   await dispatch(setInitialSettings({
     title,
     teamcityService,
@@ -251,7 +258,8 @@ export const initWidget = () => async (dispatch, getState, {dashboardApi, regist
     showLastPinned: showLastPinned || false,
     tags,
     refreshPeriod,
-    artifacts
+    artifacts,
+    buildInfo
   }));
   await dispatch(loadArtifacts());
   if (!config) {

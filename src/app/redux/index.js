@@ -38,7 +38,8 @@ const reduce = createReducer({
     showLastPinned,
     tags,
     refreshPeriod,
-    artifacts
+    artifacts,
+    buildInfo
   }) => ({
     ...state,
     isInitializing: false,
@@ -49,7 +50,8 @@ const reduce = createReducer({
     showLastPinned,
     tags,
     refreshPeriod: refreshPeriod || DEFAULT_PERIOD,
-    artifacts: artifacts || []
+    artifacts: artifacts || [],
+    buildInfo: buildInfo || {}
   }),
   [openConfiguration]: (state, isInitialConfiguration) => ({
     ...state,
@@ -192,15 +194,17 @@ const reduce = createReducer({
     ...state,
     isLoadingArtifacts: true
   }),
-  [finishedStatusLoading]: (state, artifacts) => ({
+  [finishedStatusLoading]: (state, {artifacts, buildInfo}) => ({
     ...state,
     artifacts,
+    buildInfo,
     isLoadingArtifacts: false,
     artifactsLoadErrorMessage: null
   }),
   [failedStatusLoading]: (state, artifactsLoadErrorMessage) => ({
     ...state,
     artifacts: [],
+    buildInfo: {},
     isLoadingArtifacts: false,
     artifactsLoadErrorMessage
   })
@@ -215,6 +219,7 @@ const reduce = createReducer({
   refreshPeriod: DEFAULT_PERIOD,
 
   artifacts: [],
+  buildInfo: {},
   expandedFolders: {},
   isLoadingArtifacts: false,
   artifactsLoadErrorMessage: null,
