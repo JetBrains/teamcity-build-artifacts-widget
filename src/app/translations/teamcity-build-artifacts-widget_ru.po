@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2018-09-28 11:22\n"
+"PO-Revision-Date: 2018-10-01 14:29\n"
 
 #: src/app/container/title-container.js:11
 #: src/app/container/title-container.js:20
@@ -45,11 +45,11 @@ msgstr ""
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:90
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
-msgstr ""
+msgstr "январь|февраль|март|апрель|май|июнь|июль|август|сентябрь|октябрь|ноябрь|декабрь"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:89
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
-msgstr ""
+msgstr "янв|фев|мар|апр|мая|июн|июл|авг|сен|окт|ноя|дек"
 
 #: src/app/configuration/container/title-input-container.js:11
 msgid "Optional title"
@@ -73,11 +73,11 @@ msgstr ""
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:88
 msgid "Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday"
-msgstr ""
+msgstr "воскресенье|понедельник|вторник|среда|четверг|пятница|суббота"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:87
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
-msgstr ""
+msgstr "вск|пнд|втр|срд|чтв|птн|сбт"
 
 #: src/app/configuration/container/service-select-container.js:11
 #: src/app/configuration/container/service-select-container.js:13
@@ -102,9 +102,9 @@ msgstr ""
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:91
 msgid "am|pm"
-msgstr ""
+msgstr "ДП|ПП"
 
 #: src/app/configuration/container/refresh-period-container.js:8
 msgid "{{minutes}} min"
-msgstr ""
+msgstr "{{minutes}} мин"
 
