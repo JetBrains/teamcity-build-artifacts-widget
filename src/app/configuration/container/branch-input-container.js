@@ -7,17 +7,12 @@ import {updateBranch} from '../../redux/actions';
 
 
 const BranchInputContainer = connect(
-  state => {
-    console.log('>>>>>', state.configuration);
-
-
-    return {
-      label: i18n('Custom branch name'),
-      'data-test': 'branch-name-input',
-      value: state.configuration.branch,
-      size: InputSize.AUTO
-    };
-  },
+  state => ({
+    label: i18n('Custom branch name'),
+    'data-test': 'branch-name-input',
+    value: state.configuration.branch,
+    size: InputSize.AUTO
+  }),
   dispatch => ({
     onChange: event => dispatch(updateBranch(event.target.value))
   })
