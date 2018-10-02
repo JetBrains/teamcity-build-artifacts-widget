@@ -11,100 +11,104 @@ msgstr ""
 "Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2018-10-01 16:20\n"
+"PO-Revision-Date: 2018-10-02 11:42\n"
 
 #: src/app/container/title-container.js:11
 #: src/app/container/title-container.js:20
 msgid "Artifacts"
-msgstr ""
+msgstr "Artefactos"
 
 #: src/app/container/title-container.js:19
 msgid "Artifacts: {{ buildConfiguration }}"
-msgstr ""
+msgstr "Artefactos: {{ buildConfiguration }}"
 
 #: src/app/configuration/component/build-type-select.js:57
 #: src/app/configuration/component/build-type-select.js:58
 msgid "Build configuration"
-msgstr ""
+msgstr "Configuración de build"
 
 #: src/app/configuration/container/tags-input-container.js:11
 msgid "Build with specified tags (comma-separated)"
-msgstr ""
+msgstr "Build con etiquetas especificadas (separadas por comas)"
 
-#: src/app/configuration/component/configuration.js:33
+#: src/app/configuration/component/configuration.js:35
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #: src/app/content.js:53
 msgid "Cannot load build artifacts"
+msgstr "No pueden cargarse los artefactos del build"
+
+#: src/app/configuration/container/branch-input-container.js:11
+msgid "Custom branch name"
 msgstr ""
 
 #: src/app/configuration/component/build-type-select.js:40
 msgid "Filter projects and build configurations"
-msgstr ""
+msgstr "Filtrar proyectos y configuraciones de build"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:90
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
-msgstr ""
+msgstr "Enero|Febrero|Marzo|Abril|Mayo|Junio|Julio|Agosto|Septiembre|Octubre|Noviembre|Diciembre"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:89
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
-msgstr ""
+msgstr "Ene|Feb|Mar|Abr|May|Jun|Jul|Ago|Sep|Oct|Nov|Dic"
 
 #: src/app/configuration/container/title-input-container.js:11
 msgid "Optional title"
-msgstr ""
+msgstr "Título opcional"
 
-#: src/app/configuration/component/configuration.js:30
+#: src/app/configuration/component/configuration.js:32
 msgid "Save"
-msgstr ""
+msgstr "Guardar"
 
 #: src/app/content.js:45
 msgid "Set up..."
-msgstr ""
+msgstr "Configurar..."
 
-#: src/app/configuration/component/configuration.js:66
+#: src/app/configuration/component/configuration.js:70
 msgid "Show last pinned build"
-msgstr ""
+msgstr "Mostrar el último build anclado"
 
-#: src/app/configuration/component/configuration.js:55
+#: src/app/configuration/component/configuration.js:59
 msgid "Show last successful build"
-msgstr ""
+msgstr "Mostrar el último build correcto"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:88
 msgid "Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday"
-msgstr ""
+msgstr "Domingo|Lunes|Martes|Miércoles|Jueves|Viernes|Sábado"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:87
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
-msgstr ""
+msgstr "Dom|Lun|Mar|Mié|Jue|Vie|Sáb"
 
-#: src/app/configuration/container/service-select-container.js:11
-#: src/app/configuration/container/service-select-container.js:13
+#: src/app/configuration/container/service-select-container.js:10
+#: src/app/configuration/container/service-select-container.js:12
 msgid "TeamCity server"
-msgstr ""
+msgstr "Servidor de TeamCity"
 
 #: src/app/content.js:63
 msgid "This build doesn’t contain any artifacts"
-msgstr ""
+msgstr "Este build no contiene artefactos"
 
 #: src/app/configuration/container/refresh-period-container.js:11
 msgid "Widget refreshes every minute"
-msgstr ""
+msgstr "El widget se actualiza cada minuto"
 
 #: src/app/configuration/container/refresh-period-container.js:12
 msgid "Widget refreshes every {{minutes}} minutes"
-msgstr ""
+msgstr "El widget se actualiza cada {{minutes}} minutos"
 
 #: src/app/content.js:43
 msgid "Widget setup is not finished yet."
-msgstr ""
+msgstr "La configuración del widget todavía no ha finalizado."
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:91
 msgid "am|pm"
-msgstr ""
+msgstr "a. m. |p. m."
 
 #: src/app/configuration/container/refresh-period-container.js:8
 msgid "{{minutes}} min"
-msgstr ""
+msgstr "{{minutes}} min"
 
