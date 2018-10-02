@@ -19,7 +19,7 @@ const Widget = (
     Content
   }
 ) => (
-  <div className={styles.widget} data-test="project-status-widget">
+  <div className={styles.widget} data-test="build-artifacts-widget">
     <Timer
       onTick={onRefresh}
       period={refreshPeriod}
