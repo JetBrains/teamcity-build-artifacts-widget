@@ -14,7 +14,7 @@ const TitleContainer = connect(
       dashboardApi
     }
     : {
-      title: state.title ||
+      title: state.configuration.title ||
         (state.buildType
           ? i18n('Artifacts: {{ buildConfiguration }}', {buildConfiguration: state.buildType.path})
           : i18n('Artifacts')),

@@ -3,19 +3,21 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import {i18n} from 'hub-dashboard-addons/dist/localization';
+
 import Checkbox from '@jetbrains/ring-ui/components/checkbox/checkbox';
 import ConfigurationForm from '@jetbrains/hub-widget-ui/dist/configuration-form';
+
+import RefreshPeriodContainer from '../container/refresh-period-container';
+import TitleInputContainer from '../container/title-input-container';
+import ServiceSelectContainer from '../container/service-select-container';
+import BuildTypeSelectContainer from '../container/build-type-select-container';
+import TagsInputContainer from '../container/tags-input-container';
+import BranchInputContainer from '../container/branch-input-container';
 
 import styles from './configuration.css';
 
 const Configuration = (
   {
-    refreshPeriodControl,
-    titleInput,
-    serviceSelect,
-    configurationSelect,
-    tagsInput,
-
     showLastSuccessful,
     onShowLastSuccessfulChange,
 
@@ -33,19 +35,21 @@ const Configuration = (
     cancelButtonLabel={i18n('Cancel')}
     onCancel={onCancel}
 
-    panelControls={[<span key={'refresh'}>{refreshPeriodControl}</span>]}
+    panelControls={[<span key={'refresh'}><RefreshPeriodContainer/></span>]}
   >
-    {titleInput}
+    <TitleInputContainer/>
 
     <div className={styles.container} data-test="service-select">
-      {serviceSelect}
+      <ServiceSelectContainer/>
     </div>
 
     <div className={styles.container} data-test="configuration-select">
-      {configurationSelect}
+      <BuildTypeSelectContainer/>
     </div>
 
-    {tagsInput}
+    <TagsInputContainer/>
+
+    <BranchInputContainer/>
 
     <div
       className={classNames(styles.control, styles.controlFirst)}
@@ -72,12 +76,6 @@ const Configuration = (
 );
 
 Configuration.propTypes = {
-  refreshPeriodControl: PropTypes.node.isRequired,
-  titleInput: PropTypes.node.isRequired,
-  serviceSelect: PropTypes.node.isRequired,
-  configurationSelect: PropTypes.node.isRequired,
-  tagsInput: PropTypes.node.isRequired,
-
   showLastSuccessful: PropTypes.bool.isRequired,
   onShowLastSuccessfulChange: PropTypes.func.isRequired,
 

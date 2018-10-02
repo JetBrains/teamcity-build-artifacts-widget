@@ -1,4 +1,3 @@
-import React from 'react';
 import {connect} from 'react-redux';
 
 import Configuration from '../component/configuration';
@@ -9,23 +8,9 @@ import {
   updateShowLastSuccessful
 } from '../../redux/actions';
 
-import TitleInputContainer from './title-input-container';
-import ServiceSelectContainer from './service-select-container';
-import RefreshPeriodContainer from './refresh-period-container';
-import BuildTypeSelectContainer from './build-type-select-container';
-import TagsInputContainer from './tags-input-container';
-
-
 const ConfigurationContainer = connect(
   state => ({
-    refreshPeriodControl: <RefreshPeriodContainer/>,
-    titleInput: <TitleInputContainer/>,
-    serviceSelect: <ServiceSelectContainer/>,
-    configurationSelect: <BuildTypeSelectContainer/>,
-    tagsInput: <TagsInputContainer/>,
-
     showLastSuccessful: state.configuration.showLastSuccessful,
-
     showLastPinned: state.configuration.showLastPinned
   }),
   dispatch => ({

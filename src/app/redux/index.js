@@ -23,7 +23,8 @@ import {
   updateShowLastPinned,
   updateShowLastSuccessful,
   updateTags,
-  updateTitle
+  updateTitle,
+  updateBranch
 } from './actions';
 
 // eslint-disable-next-line no-magic-numbers
@@ -37,18 +38,23 @@ const reduce = createReducer({
     showLastSuccessful,
     showLastPinned,
     tags,
+    branch,
     refreshPeriod,
     artifacts,
     buildInfo
   }) => ({
     ...state,
+    configuration: {
+      ...state.configuration,
+      branch,
+      tags,
+      title
+    },
     isInitializing: false,
-    title,
     teamcityService,
     buildType,
     showLastSuccessful,
     showLastPinned,
-    tags,
     refreshPeriod: refreshPeriod || DEFAULT_PERIOD,
     artifacts: artifacts || [],
     buildInfo: buildInfo || {}
@@ -58,13 +64,11 @@ const reduce = createReducer({
     configuration: {
       ...state.configuration,
       isConfiguring: true,
-      title: state.title,
       refreshPeriod: state.refreshPeriod,
       selectedTeamcityService: state.teamcityService,
       selectedBuildType: state.buildType,
       showLastSuccessful: state.showLastSuccessful,
       showLastPinned: state.showLastPinned,
-      tags: state.tags,
 
       isInitialConfiguration
     }
@@ -74,6 +78,13 @@ const reduce = createReducer({
     configuration: {
       ...state.configuration,
       title
+    }
+  }),
+  [updateBranch]: (state, branch) => ({
+    ...state,
+    configuration: {
+      ...state.configuration,
+      branch
     }
   }),
   [startedTeamcityServicesLoading]: state => ({

@@ -29,13 +29,14 @@ export default class TeamcityService {
 
   async getBuildInfo(
     teamcityService, buildType, showLastSuccessful,
-    showLastPinned, tags, path = ''
+    showLastPinned, tags, branch, path = ''
   ) {
     const buildTypePart = `buildType:${buildType.id}`;
     const statusPart = showLastSuccessful && 'status:SUCCESS';
     const pinnedPart = `pinned:${showLastPinned ? true : 'any'}`;
     const tagsPart = tags && `tags:${tags}`;
-    const locator = [buildTypePart, statusPart, pinnedPart, tagsPart].
+    const branchPart = `branch:(${branch ? branch : 'default:true'})`;
+    const locator = [buildTypePart, statusPart, pinnedPart, branchPart, tagsPart].
       filter(it => it).
       join(',');
     return await this._fetchTeamcity(
@@ -46,11 +47,11 @@ export default class TeamcityService {
 
   async getArtifacts(
     teamcityService, buildType, showLastSuccessful,
-    showLastPinned, tags, path = ''
+    showLastPinned, tags, branch, path = ''
   ) {
     return (await this.getBuildInfo(
       teamcityService, buildType, showLastSuccessful,
-      showLastPinned, tags, `/artifacts/children${path}`
+      showLastPinned, tags, branch, `/artifacts/children${path}`
     )).file;
   }
 

@@ -8,6 +8,7 @@ export const openConfiguration = createAction('Open configuration mode');
 export const updateRefreshPeriod = createAction('Update refresh period');
 
 export const updateTitle = createAction('Update title');
+export const updateBranch = createAction('Update branch');
 
 export const startedTeamcityServicesLoading =
   createAction('Started loading list of TeamCity services');
@@ -52,13 +53,12 @@ export const updateExpandedFolders =
 // eslint-disable-next-line complexity
 export const loadArtifacts = (path = '') => async (dispatch, getState, {dashboardApi}) => {
   const {
-    configuration: {isConfiguring},
+    configuration: {isConfiguring, branch, tags},
     teamcityService,
     buildType,
     showLastSuccessful,
     showLastPinned,
     expandedFolders,
-    tags,
     artifacts: storedArtifacts
   } = getState();
   if (!isConfiguring && teamcityService && buildType) {
@@ -108,6 +108,7 @@ export const loadArtifacts = (path = '') => async (dispatch, getState, {dashboar
               showLastSuccessful,
               showLastPinned,
               tags,
+              branch,
               `/${leaf}`
             );
           }
@@ -141,7 +142,8 @@ export const loadArtifacts = (path = '') => async (dispatch, getState, {dashboar
         buildType,
         showLastSuccessful,
         showLastPinned,
-        tags
+        tags,
+        branch
       );
       await dashboardApi.storeCache({artifacts, buildInfo});
       await dispatch(finishedStatusLoading({artifacts, buildInfo}));
@@ -204,6 +206,7 @@ export const saveConfiguration = () => async (dispatch, getState, {dashboardApi}
       showLastSuccessful,
       showLastPinned,
       tags,
+      branch,
       refreshPeriod
     }
   } = getState();
@@ -218,6 +221,7 @@ export const saveConfiguration = () => async (dispatch, getState, {dashboardApi}
     showLastSuccessful,
     showLastPinned,
     tags,
+    branch,
     refreshPeriod
   });
   await dispatch(applyConfiguration());
@@ -247,6 +251,7 @@ export const initWidget = () => async (dispatch, getState, {dashboardApi, regist
     showLastSuccessful,
     showLastPinned,
     tags,
+    branch,
     refreshPeriod
   } = config || {};
   const {result: {artifacts, buildInfo}} = ((await dashboardApi.readCache())) || {result: {}};
@@ -257,6 +262,7 @@ export const initWidget = () => async (dispatch, getState, {dashboardApi, regist
     showLastSuccessful: showLastSuccessful || false,
     showLastPinned: showLastPinned || false,
     tags,
+    branch,
     refreshPeriod,
     artifacts,
     buildInfo

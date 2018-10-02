@@ -5,7 +5,6 @@ import ServiceSelect from '@jetbrains/hub-widget-ui/dist/service-select';
 
 import {selectTeamcityService} from '../../redux/actions';
 
-
 const ServiceSelectContainer = connect(
   state => ({
     label: i18n('TeamCity server'),
