@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2018-10-02 12:25\n"
+"PO-Revision-Date: 2018-10-02 12:29\n"
 
 #: src/app/container/title-container.js:11
 #: src/app/container/title-container.js:20

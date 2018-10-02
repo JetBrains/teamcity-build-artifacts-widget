@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2018-10-02 12:25\n"
+"PO-Revision-Date: 2018-10-02 12:29\n"
 
 #: src/app/container/title-container.js:11
 #: src/app/container/title-container.js:20
@@ -41,7 +41,7 @@ msgstr "Невозможно загрузить артефакты сборки"
 
 #: src/app/configuration/container/branch-input-container.js:11
 msgid "Custom branch name"
-msgstr ""
+msgstr "Пользовательское имя ветки"
 
 #: src/app/configuration/component/build-type-select.js:40
 msgid "Filter projects and build configurations"
@@ -102,7 +102,7 @@ msgstr "Виджет обновляется раз в {{minutes}} мин"
 
 #: src/app/content.js:47
 msgid "Widget setup is not finished yet."
-msgstr ""
+msgstr "Настройка виджета еще не закончена."
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:91
 msgid "am|pm"
