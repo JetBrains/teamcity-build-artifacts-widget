@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2018-10-02 11:43\n"
+"PO-Revision-Date: 2018-10-02 12:25\n"
 
 #: src/app/container/title-container.js:11
 #: src/app/container/title-container.js:20
@@ -35,7 +35,7 @@ msgstr "指定したタグ（カンマ区切り）でビルド"
 msgid "Cancel"
 msgstr "取り消す"
 
-#: src/app/content.js:53
+#: src/app/content.js:57
 msgid "Cannot load build artifacts"
 msgstr ""
 
@@ -63,7 +63,7 @@ msgstr "タイトル（省略可）"
 msgid "Save"
 msgstr "保存"
 
-#: src/app/content.js:45
+#: src/app/content.js:49
 msgid "Set up..."
 msgstr "セットアップ…"
 
@@ -88,7 +88,7 @@ msgstr "日|月|火|水|木|金|土"
 msgid "TeamCity server"
 msgstr "TeamCityサーバー"
 
-#: src/app/content.js:63
+#: src/app/content.js:67
 msgid "This build doesn’t contain any artifacts"
 msgstr ""
 
@@ -100,7 +100,7 @@ msgstr "ウィジェットは1分ごとに更新されます"
 msgid "Widget refreshes every {{minutes}} minutes"
 msgstr "ウィジェットは{{minutes}}分ごとに更新されます"
 
-#: src/app/content.js:43
+#: src/app/content.js:47
 msgid "Widget setup is not finished yet."
 msgstr "ウィジェットのセットアップはまだ完了していません。"
 

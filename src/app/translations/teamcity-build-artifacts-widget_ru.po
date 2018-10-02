@@ -11,33 +11,33 @@ msgstr ""
 "Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2018-10-02 11:43\n"
+"PO-Revision-Date: 2018-10-02 12:25\n"
 
 #: src/app/container/title-container.js:11
 #: src/app/container/title-container.js:20
 msgid "Artifacts"
-msgstr ""
+msgstr "Артефакты"
 
 #: src/app/container/title-container.js:19
 msgid "Artifacts: {{ buildConfiguration }}"
-msgstr ""
+msgstr "Артефакты: {{ buildConfiguration }}"
 
 #: src/app/configuration/component/build-type-select.js:57
 #: src/app/configuration/component/build-type-select.js:58
 msgid "Build configuration"
-msgstr ""
+msgstr "Конфигурация сборки"
 
 #: src/app/configuration/container/tags-input-container.js:11
 msgid "Build with specified tags (comma-separated)"
-msgstr ""
+msgstr "Укажите теги для сборки (через запятую)"
 
 #: src/app/configuration/component/configuration.js:35
 msgid "Cancel"
 msgstr "Отмена"
 
-#: src/app/content.js:53
+#: src/app/content.js:57
 msgid "Cannot load build artifacts"
-msgstr ""
+msgstr "Невозможно загрузить артефакты сборки"
 
 #: src/app/configuration/container/branch-input-container.js:11
 msgid "Custom branch name"
@@ -45,7 +45,7 @@ msgstr ""
 
 #: src/app/configuration/component/build-type-select.js:40
 msgid "Filter projects and build configurations"
-msgstr ""
+msgstr "Фильтровать проекты и конфигурации сборки"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:90
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
@@ -57,23 +57,23 @@ msgstr "янв|фев|мар|апр|мая|июн|июл|авг|сен|окт|н
 
 #: src/app/configuration/container/title-input-container.js:11
 msgid "Optional title"
-msgstr ""
+msgstr "Необязательный заголовок"
 
 #: src/app/configuration/component/configuration.js:32
 msgid "Save"
-msgstr ""
+msgstr "Сохранить"
 
-#: src/app/content.js:45
+#: src/app/content.js:49
 msgid "Set up..."
-msgstr ""
+msgstr "Настроить..."
 
 #: src/app/configuration/component/configuration.js:70
 msgid "Show last pinned build"
-msgstr ""
+msgstr "Показывать последнюю закрепленную сборку"
 
 #: src/app/configuration/component/configuration.js:59
 msgid "Show last successful build"
-msgstr ""
+msgstr "Показывать последнюю успешную сборку"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:88
 msgid "Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday"
@@ -86,11 +86,11 @@ msgstr "вск|пнд|втр|срд|чтв|птн|сбт"
 #: src/app/configuration/container/service-select-container.js:10
 #: src/app/configuration/container/service-select-container.js:12
 msgid "TeamCity server"
-msgstr ""
+msgstr "Сервер TeamCity"
 
-#: src/app/content.js:63
+#: src/app/content.js:67
 msgid "This build doesn’t contain any artifacts"
-msgstr ""
+msgstr "Сборка не содержит артефактов"
 
 #: src/app/configuration/container/refresh-period-container.js:11
 msgid "Widget refreshes every minute"
@@ -100,7 +100,7 @@ msgstr "Виджет обновляется раз в минуту"
 msgid "Widget refreshes every {{minutes}} minutes"
 msgstr "Виджет обновляется раз в {{minutes}} мин"
 
-#: src/app/content.js:43
+#: src/app/content.js:47
 msgid "Widget setup is not finished yet."
 msgstr ""
 

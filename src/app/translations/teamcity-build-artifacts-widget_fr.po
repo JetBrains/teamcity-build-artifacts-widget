@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-10-02 11:42\n"
+"PO-Revision-Date: 2018-10-02 12:25\n"
 
 #: src/app/container/title-container.js:11
 #: src/app/container/title-container.js:20
@@ -35,7 +35,7 @@ msgstr "Build avec balises spécifiées (séparées par des virgules)"
 msgid "Cancel"
 msgstr "Annuler"
 
-#: src/app/content.js:53
+#: src/app/content.js:57
 msgid "Cannot load build artifacts"
 msgstr "Impossible de charger les artefacts de build"
 
@@ -63,7 +63,7 @@ msgstr "Titre facultatif"
 msgid "Save"
 msgstr "Enregistrer"
 
-#: src/app/content.js:45
+#: src/app/content.js:49
 msgid "Set up..."
 msgstr "Configurer..."
 
@@ -88,7 +88,7 @@ msgstr "Dim|Lun|Mar|Mer|Jeu|Ven|Sam"
 msgid "TeamCity server"
 msgstr "Serveur TeamCity"
 
-#: src/app/content.js:63
+#: src/app/content.js:67
 msgid "This build doesn’t contain any artifacts"
 msgstr "Cette build ne contient pas d'artefact"
 
@@ -100,7 +100,7 @@ msgstr "Le widget s'actualise chaque minute"
 msgid "Widget refreshes every {{minutes}} minutes"
 msgstr "Le widget s'actualise toutes les {{minutes}} minutes"
 
-#: src/app/content.js:43
+#: src/app/content.js:47
 msgid "Widget setup is not finished yet."
 msgstr "La configuration du widget n'est pas encore terminée."
 
