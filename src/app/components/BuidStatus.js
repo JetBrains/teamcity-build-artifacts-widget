@@ -8,7 +8,7 @@ import Link from '@jetbrains/ring-ui/components/link/link';
 import Icon, {Size} from '@jetbrains/ring-ui/components/icon/icon';
 import {SuccessIcon, WarningIcon} from '@jetbrains/ring-ui/components/icon/icons';
 
-import styles from '../build-status.css';
+import styles from '../app.css';
 
 
 const TC_TIMESTAMP_REGEXP = /(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})([-+]\d+)/;

@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import connect from 'react-redux/es/connect/connect';
+
 import Link from '@jetbrains/ring-ui/components/link/link';
 
 import EmptyWidget, {EmptyWidgetFaces} from '@jetbrains/hub-widget-ui/dist/empty-widget';
@@ -8,6 +10,7 @@ import {i18n} from 'hub-dashboard-addons/dist/localization';
 
 import styles from './app.css';
 import Artifacts from './components/Artifacts';
+import BuildStatus from './components/BuidStatus';
 
 function WidgetContent({children, testKey}) {
   return (
@@ -27,6 +30,7 @@ const Content = (
     isInitializing,
     teamcityService,
     buildType,
+    buildInfo,
     artifacts,
     artifactsLoadErrorMessage,
     onConfigure
@@ -67,6 +71,10 @@ const Content = (
   } else {
     return (
       <WidgetContent testKey={'widget-build-list'}>
+        <BuildStatus
+          build={buildInfo}
+        />
+
         <Artifacts artifacts={artifacts}/>
       </WidgetContent>
     );
@@ -76,9 +84,14 @@ const Content = (
 Content.propTypes = {
   teamcityService: PropTypes.object,
   buildType: PropTypes.object,
+  buildInfo: PropTypes.object,
   artifacts: PropTypes.array.isRequired,
   artifactsLoadErrorMessage: PropTypes.string,
   onConfigure: PropTypes.func.isRequired
 };
 
-export default Content;
+export default connect(
+  state => ({
+    buildInfo: state.buildInfo
+  })
+)(Content);

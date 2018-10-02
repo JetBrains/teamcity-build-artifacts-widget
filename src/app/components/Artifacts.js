@@ -1,32 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {connect} from 'react-redux';
-
 import styles from '../app.css';
 
 import FileArtifact from './FileArtifact';
 import FolderArtifact from './FolderAtrifact';
-import BuildStatus from './BuidStatus';
 
-const Artifacts = ({artifacts = [], buildInfo = {}, padded = false}) => (
-  <div>
-    <BuildStatus
-      build={buildInfo}
-    />
+export const isFile = artifact => artifact.size !== undefined;
+export const isFolder = artifact => artifact.size === undefined;
 
-    {artifacts.map(artifact => {
-      const isFile = artifact.size !== undefined;
+const Artifacts = ({artifacts = [], padded = false}) => {
+  const hasFolders = artifacts.some(isFolder);
 
-      return (
-        <div className={padded ? styles.padded : null} key={artifact.name}>
-          {isFile && <FileArtifact artifact={artifact}/>}
-          {!isFile && <FolderArtifact artifact={artifact}/>}
-        </div>
-      );
-    })}
-  </div>
-);
+  return (
+    <div>
+      {artifacts.map(artifact => {
+        const file = isFile(artifact);
+
+        return (
+          <div className={padded ? styles.padded : null} key={artifact.name}>
+            {file && <FileArtifact spacing={hasFolders || padded} artifact={artifact}/>}
+            {!file && <FolderArtifact artifact={artifact}/>}
+          </div>
+        );
+      })}
+    </div>
+  );
+};
 
 Artifacts.propTypes = {
   artifacts: PropTypes.array,
@@ -34,8 +34,4 @@ Artifacts.propTypes = {
   padded: PropTypes.bool
 };
 
-export default connect(
-  state => ({
-    buildInfo: state.buildInfo
-  })
-)(Artifacts);
+export default Artifacts;

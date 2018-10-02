@@ -22,16 +22,17 @@ const fileSize = bytes => {
 
 class FileArtifact extends React.Component {
   static propTypes = {
-    artifact: PropTypes.object,
-    teamcityService: PropTypes.object
+    artifact: PropTypes.object.isRequired,
+    spacing: PropTypes.bool.isRequired,
+    teamcityService: PropTypes.object.isRequired
   };
 
   render() {
-    const {artifact, teamcityService} = this.props;
+    const {artifact, spacing, teamcityService} = this.props;
 
     return (
       <span>
-        <span className={styles.fileSpacing}/>
+        {spacing && <span className={styles.fileSpacing}/>}
         <FileIcon className={styles.artifactIcon} size={16}/>
         <Link href={teamcityService.homeUrl + artifact.content.href}>{artifact.name}</Link>
         <span className={styles.bytes}>{fileSize(artifact.size)}</span>

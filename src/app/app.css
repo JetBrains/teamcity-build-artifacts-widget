@@ -56,3 +56,37 @@
 .link {
   outline: none;
 }
+
+.build {
+  margin-bottom: unit;
+
+  line-height: calc(unit * 3);
+}
+
+.status {
+  display: block;
+
+  line-height: calc(unit * 2.5);
+}
+
+.icon {
+  position: relative;
+  top: -3px;
+
+  width: 14px;
+  margin-right: 2px;
+}
+
+.ok {
+  color: var(--ring-icon-success-color);
+}
+
+.fail {
+  color: var(--ring-icon-error-color);
+}
+
+.buildTime {
+  color: var(--ring-secondary-color);
+
+  font-size: 12px;
+}
