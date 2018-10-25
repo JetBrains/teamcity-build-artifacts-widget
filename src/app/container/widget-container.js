@@ -22,18 +22,18 @@ const getPresentationalWidgetTitle = state => ({
 const WidgetContainer = connect(
   (state, {dashboardApi}) => ({
     isConfiguring: state.configuration.isConfiguring,
-    isLoadingArtifacts: state.isLoadingArtifacts,
+    widgetLoader: state.isLoadingArtifacts,
     // eslint-disable-next-line no-magic-numbers
-    refreshPeriod: state.refreshPeriod * 1000,
+    tickPeriod: state.refreshPeriod * 1000,
     dashboardApi,
-    title: state.configuration.isConfiguring
+    widgetTitle: state.configuration.isConfiguring
       ? i18n('Artifacts')
       : getPresentationalWidgetTitle(state),
     Configuration: ConfigurationContainer,
     Content: ContentContainer
   }),
   dispatch => ({
-    onRefresh: () => dispatch(loadArtifacts())
+    onTick: () => dispatch(loadArtifacts())
   })
 )(Widget);
 
