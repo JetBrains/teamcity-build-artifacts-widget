@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2018-10-02 18:23\n"
+"PO-Revision-Date: 2018-10-08 21:02\n"
 
 #: src/app/container/widget-container.js:15
 #: src/app/container/widget-container.js:30
@@ -41,7 +41,7 @@ msgstr "Impossible de charger les artefacts de build"
 
 #: src/app/configuration/container/branch-input-container.js:11
 msgid "Custom branch name"
-msgstr ""
+msgstr "Nom de branche personnalisée"
 
 #: src/app/configuration/component/build-type-select.js:40
 msgid "Filter projects and build configurations"

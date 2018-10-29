@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2018-10-02 18:23\n"
+"PO-Revision-Date: 2018-10-08 21:03\n"
 
 #: src/app/container/widget-container.js:15
 #: src/app/container/widget-container.js:30
@@ -37,11 +37,11 @@ msgstr "取り消す"
 
 #: src/app/content.js:57
 msgid "Cannot load build artifacts"
-msgstr ""
+msgstr "ビルドアーティファクトを読み込めません"
 
 #: src/app/configuration/container/branch-input-container.js:11
 msgid "Custom branch name"
-msgstr ""
+msgstr "カスタムブランチ名"
 
 #: src/app/configuration/component/build-type-select.js:40
 msgid "Filter projects and build configurations"
@@ -90,7 +90,7 @@ msgstr "TeamCityサーバー"
 
 #: src/app/content.js:67
 msgid "This build doesn’t contain any artifacts"
-msgstr ""
+msgstr "このビルドにはアーティファクトが含まれていません"
 
 #: src/app/configuration/container/refresh-period-container.js:11
 msgid "Widget refreshes every minute"
