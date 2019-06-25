@@ -8,10 +8,10 @@ msgstr ""
 "X-Crowdin-Project: youtrackjetbrains\n"
 "X-Crowdin-Language: ja\n"
 "X-Crowdin-File: /widgets/teamcity-build-artifacts-widget/default.pot\n"
-"Last-Translator: jetbrains <mikhail.vink@jetbrains.com>\n"
+"Last-Translator: JetBrains (jetbrains)\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2019-03-14 17:18\n"
+"PO-Revision-Date: 2019-06-25 09:11\n"
 
 #: src/app/container/widget-container.js:15
 #: src/app/container/widget-container.js:30
@@ -47,11 +47,11 @@ msgstr "カスタムブランチ名"
 msgid "Filter projects and build configurations"
 msgstr "プロジェクトとビルド構成をフィルタリング"
 
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:90
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:116
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
 msgstr "1月|2月|3月|4月|5月|6月|7月|8月|9月|10月|11月|12月"
 
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:89
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:115
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 msgstr "1月|2月|3月|4月|5月|6月|7月|8月|9月|10月|11月|12月"
 
@@ -75,11 +75,11 @@ msgstr "最後に固定されたビルドを表示"
 msgid "Show last successful build"
 msgstr "最後に成功したビルドを表示"
 
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:88
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:114
 msgid "Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday"
 msgstr "日曜日|月曜日|火曜日|水曜日|木曜日|金曜日|土曜日"
 
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:87
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:113
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
 msgstr "日|月|火|水|木|金|土"
 
@@ -104,7 +104,7 @@ msgstr "ウィジェットは{{minutes}}分ごとに更新されます"
 msgid "Widget setup is not finished yet."
 msgstr "ウィジェットのセットアップはまだ完了していません。"
 
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:91
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:117
 msgid "am|pm"
 msgstr "am|pm"
 
