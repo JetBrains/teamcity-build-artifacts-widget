@@ -5,108 +5,108 @@ msgstr ""
 "Project-Id-Version: youtrackjetbrains\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: youtrackjetbrains\n"
-"X-Crowdin-Language: de\n"
+"X-Crowdin-Language: eo\n"
 "X-Crowdin-File: /widgets/teamcity-build-artifacts-widget/default.pot\n"
-"Language-Team: German\n"
-"Language: de_DE\n"
-"PO-Revision-Date: 2020-01-14 21:03\n"
+"Language-Team: Esperanto\n"
+"Language: eo_UY\n"
+"PO-Revision-Date: 2019-12-20 15:00\n"
 
 #: src/app/container/widget-container.js:15
 #: src/app/container/widget-container.js:30
 msgid "Artifacts"
-msgstr "Artefakte"
+msgstr "crwdns790939:0crwdne790939:0"
 
 #: src/app/container/widget-container.js:14
 msgid "Artifacts: {{ buildConfiguration }}"
-msgstr "Artefakte: {{ buildConfiguration }}"
+msgstr "crwdns790940:0{{ buildConfiguration }}crwdne790940:0"
 
 #: src/app/configuration/component/build-type-select.js:57
 #: src/app/configuration/component/build-type-select.js:58
 msgid "Build configuration"
-msgstr "Build-Konfiguration"
+msgstr "crwdns790945:0crwdne790945:0"
 
 #: src/app/configuration/container/tags-input-container.js:11
 msgid "Build with specified tags (comma-separated)"
-msgstr "Build mit angegebenen Tags (durch Kommas getrennt)"
+msgstr "crwdns790944:0crwdne790944:0"
 
 #: src/app/configuration/component/configuration.js:35
 msgid "Cancel"
-msgstr "Abbrechen"
+msgstr "crwdns790764:0crwdne790764:0"
 
 #: src/app/content.js:57
 msgid "Cannot load build artifacts"
-msgstr "Build-Artefakte können nicht geladen werden"
+msgstr "crwdns874865:0crwdne874865:0"
 
 #: src/app/configuration/container/branch-input-container.js:11
 msgid "Custom branch name"
-msgstr "Benutzerdefinierter Zweigname"
+msgstr "crwdns894540:0crwdne894540:0"
 
 #: src/app/configuration/component/build-type-select.js:40
 msgid "Filter projects and build configurations"
-msgstr "Projekte und Build-Konfigurationen filtern"
+msgstr "crwdns790941:0crwdne790941:0"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:116
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
-msgstr "Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember"
+msgstr "crwdns790771:0crwdne790771:0"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:115
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
-msgstr "Jan|Feb|Mär|Apr|Mai|Jun|Jul|Aug|Sep|Okt|Nov|Dez"
+msgstr "crwdns790772:0crwdne790772:0"
 
 #: src/app/configuration/container/title-input-container.js:11
 msgid "Optional title"
-msgstr "Optionaler Titel"
+msgstr "crwdns790775:0crwdne790775:0"
 
 #: src/app/configuration/component/configuration.js:32
 msgid "Save"
-msgstr "Speichern"
+msgstr "crwdns790778:0crwdne790778:0"
 
 #: src/app/content.js:49
 msgid "Set up..."
-msgstr "Einrichten..."
+msgstr "crwdns790779:0crwdne790779:0"
 
 #: src/app/configuration/component/configuration.js:70
 msgid "Show last pinned build"
-msgstr "Letzten angepinnten Build anzeigen"
+msgstr "crwdns790942:0crwdne790942:0"
 
 #: src/app/configuration/component/configuration.js:59
 msgid "Show last successful build"
-msgstr "Letzten erfolgreichen Build anzeigen"
+msgstr "crwdns790943:0crwdne790943:0"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:114
 msgid "Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday"
-msgstr "Sonntag|Montag|Dienstag|Mittwoch|Donnerstag|Freitag|Samstag"
+msgstr "crwdns790784:0crwdne790784:0"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:113
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
-msgstr "So|Mo|Di|Mi|Do|Fr|Sa"
+msgstr "crwdns790785:0crwdne790785:0"
 
 #: src/app/configuration/container/service-select-container.js:10
 #: src/app/configuration/container/service-select-container.js:12
 msgid "TeamCity server"
-msgstr "TeamCity-Server"
+msgstr "crwdns790786:0crwdne790786:0"
 
 #: src/app/content.js:67
 msgid "This build doesn’t contain any artifacts"
-msgstr "Dieser Build enthält keine Artefakte"
+msgstr "crwdns874867:0crwdne874867:0"
 
 #: src/app/configuration/container/refresh-period-container.js:11
 msgid "Widget refreshes every minute"
-msgstr "Widget wird jede Minute aktualisiert"
+msgstr "crwdns790787:0crwdne790787:0"
 
 #: src/app/configuration/container/refresh-period-container.js:12
 msgid "Widget refreshes every {{minutes}} minutes"
-msgstr "Widget wird alle {{minutes}} Minuten aktualisiert"
+msgstr "crwdns790788:0{{minutes}}crwdne790788:0"
 
 #: src/app/content.js:47
 msgid "Widget setup is not finished yet."
-msgstr "Die Widget-Einrichtung ist noch nicht beendet."
+msgstr "crwdns790789:0crwdne790789:0"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:117
 msgid "am|pm"
-msgstr "AM|PM"
+msgstr "crwdns790790:0crwdne790790:0"
 
 #: src/app/configuration/container/refresh-period-container.js:8
 msgid "{{minutes}} min"
-msgstr "{{minutes}} Minuten"
+msgstr "crwdns790791:0{{minutes}}crwdne790791:0"
 
