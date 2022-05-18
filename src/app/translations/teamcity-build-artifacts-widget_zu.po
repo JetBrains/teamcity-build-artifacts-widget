@@ -2,99 +2,99 @@ msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Project-Id-Version: youtrackjetbrains\n"
-"Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
-"X-Crowdin-Project: youtrackjetbrains\n"
-"X-Crowdin-Project-ID: 295498\n"
-"X-Crowdin-Language: ru\n"
+"Project-Id-Version: youtrack-custom-localization\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: youtrack-custom-localization\n"
+"X-Crowdin-Project-ID: 309400\n"
+"X-Crowdin-Language: zu\n"
 "X-Crowdin-File: /widgets/teamcity-build-artifacts-widget/default.pot\n"
-"X-Crowdin-File-ID: 30064\n"
-"Language-Team: Russian\n"
-"Language: ru_RU\n"
-"PO-Revision-Date: 2022-05-18 10:36\n"
+"X-Crowdin-File-ID: 652262\n"
+"Language-Team: Zulu\n"
+"Language: zu_ZA\n"
+"PO-Revision-Date: 2022-05-18 10:41\n"
 
 #: src/app/investigation.js:41
 msgid "Build problems:"
-msgstr "Проблемы со сборкой:"
+msgstr "crwdns270133340:0crwdne270133340:0"
 
 #: src/app/configuration/component/configuration.js:45
 msgid "Cancel"
-msgstr "Отмена"
+msgstr "crwdns270133342:0crwdne270133342:0"
 
 #: src/app/content.js:39
 msgid "Cannot load investigations"
-msgstr "Невозможно загрузить исследования"
+msgstr "crwdns270133344:0crwdne270133344:0"
 
 #: src/app/configuration/component/configuration.js:79
 msgid "Hide child projects"
-msgstr ""
+msgstr "crwdns270133346:0crwdne270133346:0"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:90
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
-msgstr "январь|февраль|март|апрель|май|июнь|июль|август|сентябрь|октябрь|ноябрь|декабрь"
+msgstr "crwdns270133348:0crwdne270133348:0"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:89
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
-msgstr "янв|фев|мар|апр|мая|июн|июл|авг|сен|окт|ноя|дек"
+msgstr "crwdns270133350:0crwdne270133350:0"
 
 #: src/app/content.js:49
 msgid "No investigations<br>are assigned to you"
-msgstr "Вам не назначены<br>никакие исследования"
+msgstr "crwdns270133352:0crwdne270133352:0"
 
 #: src/app/configuration/container/title-input-container.js:11
 msgid "Optional title"
-msgstr "Необязательный заголовок"
+msgstr "crwdns270133354:0crwdne270133354:0"
 
 #: src/app/configuration/component/configuration.js:42
 msgid "Save"
-msgstr "Сохранить"
+msgstr "crwdns270133356:0crwdne270133356:0"
 
 #: src/app/configuration/component/configuration.js:62
 msgid "Select service"
-msgstr ""
+msgstr "crwdns270133358:0crwdne270133358:0"
 
 #: src/app/content.js:31
 msgid "Set up..."
-msgstr "Настроить..."
+msgstr "crwdns270133360:0crwdne270133360:0"
 
 #: src/app/configuration/component/configuration.js:71
 msgid "Show green builds"
-msgstr ""
+msgstr "crwdns270133362:0crwdne270133362:0"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:88
 msgid "Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday"
-msgstr "воскресенье|понедельник|вторник|среда|четверг|пятница|суббота"
+msgstr "crwdns270133364:0crwdne270133364:0"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:87
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
-msgstr "вс|пн|вт|ср|чт|пт|сб"
+msgstr "crwdns270133366:0crwdne270133366:0"
 
 #: src/app/container/title-container.js:11
 #: src/app/container/title-container.js:17
 msgid "TeamCity Investigations"
-msgstr ""
+msgstr "crwdns270133368:0crwdne270133368:0"
 
 #: src/app/content.js:30
 msgid "TeamCity service is not configured yet."
-msgstr "Сервис TeamCity еще не настроен."
+msgstr "crwdns270133370:0crwdne270133370:0"
 
 #: src/app/investigation.js:40
 msgid "Tests failed:"
-msgstr "Неудавшиеся тесты:"
+msgstr "crwdns270133372:0crwdne270133372:0"
 
 #: src/app/configuration/component/configuration.js:15
 msgid "Widget refreshes every minute"
-msgstr "Виджет обновляется раз в минуту"
+msgstr "crwdns270133374:0crwdne270133374:0"
 
 #: src/app/configuration/component/configuration.js:16
 msgid "Widget refreshes every {{minutes}} minutes"
-msgstr "Виджет обновляется раз в {{minutes}} мин"
+msgstr "crwdns270133376:0{{minutes}}crwdne270133376:0"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:91
 msgid "am|pm"
-msgstr "ДП|ПП"
+msgstr "crwdns270133378:0crwdne270133378:0"
 
 #: src/app/configuration/component/configuration.js:13
 msgid "{{minutes}} min"
-msgstr "{{minutes}} мин"
+msgstr "crwdns270133380:0{{minutes}}crwdne270133380:0"
 

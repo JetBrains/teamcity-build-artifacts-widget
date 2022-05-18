@@ -2,28 +2,28 @@ msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Project-Id-Version: youtrackjetbrains\n"
-"Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
-"X-Crowdin-Project: youtrackjetbrains\n"
-"X-Crowdin-Project-ID: 295498\n"
-"X-Crowdin-Language: ru\n"
+"Project-Id-Version: youtrack-custom-localization\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: youtrack-custom-localization\n"
+"X-Crowdin-Project-ID: 309400\n"
+"X-Crowdin-Language: zh-TW\n"
 "X-Crowdin-File: /widgets/teamcity-build-artifacts-widget/default.pot\n"
-"X-Crowdin-File-ID: 30064\n"
-"Language-Team: Russian\n"
-"Language: ru_RU\n"
-"PO-Revision-Date: 2022-05-18 10:36\n"
+"X-Crowdin-File-ID: 652262\n"
+"Language-Team: Chinese Traditional\n"
+"Language: zh_TW\n"
+"PO-Revision-Date: 2022-05-18 10:37\n"
 
 #: src/app/investigation.js:41
 msgid "Build problems:"
-msgstr "Проблемы со сборкой:"
+msgstr ""
 
 #: src/app/configuration/component/configuration.js:45
 msgid "Cancel"
-msgstr "Отмена"
+msgstr ""
 
 #: src/app/content.js:39
 msgid "Cannot load investigations"
-msgstr "Невозможно загрузить исследования"
+msgstr ""
 
 #: src/app/configuration/component/configuration.js:79
 msgid "Hide child projects"
@@ -31,31 +31,31 @@ msgstr ""
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:90
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
-msgstr "январь|февраль|март|апрель|май|июнь|июль|август|сентябрь|октябрь|ноябрь|декабрь"
+msgstr ""
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:89
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
-msgstr "янв|фев|мар|апр|мая|июн|июл|авг|сен|окт|ноя|дек"
+msgstr ""
 
 #: src/app/content.js:49
 msgid "No investigations<br>are assigned to you"
-msgstr "Вам не назначены<br>никакие исследования"
+msgstr ""
 
 #: src/app/configuration/container/title-input-container.js:11
 msgid "Optional title"
-msgstr "Необязательный заголовок"
+msgstr "可選標題"
 
 #: src/app/configuration/component/configuration.js:42
 msgid "Save"
-msgstr "Сохранить"
+msgstr ""
 
 #: src/app/configuration/component/configuration.js:62
 msgid "Select service"
-msgstr ""
+msgstr "選擇服務"
 
 #: src/app/content.js:31
 msgid "Set up..."
-msgstr "Настроить..."
+msgstr ""
 
 #: src/app/configuration/component/configuration.js:71
 msgid "Show green builds"
@@ -63,11 +63,11 @@ msgstr ""
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:88
 msgid "Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday"
-msgstr "воскресенье|понедельник|вторник|среда|четверг|пятница|суббота"
+msgstr ""
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:87
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
-msgstr "вс|пн|вт|ср|чт|пт|сб"
+msgstr ""
 
 #: src/app/container/title-container.js:11
 #: src/app/container/title-container.js:17
@@ -76,25 +76,25 @@ msgstr ""
 
 #: src/app/content.js:30
 msgid "TeamCity service is not configured yet."
-msgstr "Сервис TeamCity еще не настроен."
+msgstr ""
 
 #: src/app/investigation.js:40
 msgid "Tests failed:"
-msgstr "Неудавшиеся тесты:"
+msgstr ""
 
 #: src/app/configuration/component/configuration.js:15
 msgid "Widget refreshes every minute"
-msgstr "Виджет обновляется раз в минуту"
+msgstr ""
 
 #: src/app/configuration/component/configuration.js:16
 msgid "Widget refreshes every {{minutes}} minutes"
-msgstr "Виджет обновляется раз в {{minutes}} мин"
+msgstr "小工具每 {{minutes}} 分鐘重新整理一次"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:91
 msgid "am|pm"
-msgstr "ДП|ПП"
+msgstr ""
 
 #: src/app/configuration/component/configuration.js:13
 msgid "{{minutes}} min"
-msgstr "{{minutes}} мин"
+msgstr "{{minutes}} 分鐘"
 

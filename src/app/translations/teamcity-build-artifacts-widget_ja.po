@@ -5,108 +5,96 @@ msgstr ""
 "Project-Id-Version: youtrackjetbrains\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Crowdin-Project: youtrackjetbrains\n"
+"X-Crowdin-Project-ID: 295498\n"
 "X-Crowdin-Language: ja\n"
 "X-Crowdin-File: /widgets/teamcity-build-artifacts-widget/default.pot\n"
+"X-Crowdin-File-ID: 30064\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2020-01-14 21:03\n"
+"PO-Revision-Date: 2022-05-18 10:35\n"
 
-#: src/app/container/widget-container.js:15
-#: src/app/container/widget-container.js:30
-msgid "Artifacts"
-msgstr "アーティファクト"
+#: src/app/investigation.js:41
+msgid "Build problems:"
+msgstr "ビルドの問題："
 
-#: src/app/container/widget-container.js:14
-msgid "Artifacts: {{ buildConfiguration }}"
-msgstr "アーティファクト：{{ buildConfiguration }}"
-
-#: src/app/configuration/component/build-type-select.js:57
-#: src/app/configuration/component/build-type-select.js:58
-msgid "Build configuration"
-msgstr "ビルド構成"
-
-#: src/app/configuration/container/tags-input-container.js:11
-msgid "Build with specified tags (comma-separated)"
-msgstr "指定したタグ（カンマ区切り）でビルド"
-
-#: src/app/configuration/component/configuration.js:35
+#: src/app/configuration/component/configuration.js:45
 msgid "Cancel"
 msgstr "取り消す"
 
-#: src/app/content.js:57
-msgid "Cannot load build artifacts"
-msgstr "ビルドアーティファクトを読み込めません"
+#: src/app/content.js:39
+msgid "Cannot load investigations"
+msgstr "調査を読み込めません"
 
-#: src/app/configuration/container/branch-input-container.js:11
-msgid "Custom branch name"
-msgstr "カスタムブランチ名"
+#: src/app/configuration/component/configuration.js:79
+msgid "Hide child projects"
+msgstr ""
 
-#: src/app/configuration/component/build-type-select.js:40
-msgid "Filter projects and build configurations"
-msgstr "プロジェクトとビルド構成をフィルタリング"
-
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:116
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:90
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
 msgstr "1月|2月|3月|4月|5月|6月|7月|8月|9月|10月|11月|12月"
 
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:115
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:89
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 msgstr "1月|2月|3月|4月|5月|6月|7月|8月|9月|10月|11月|12月"
+
+#: src/app/content.js:49
+msgid "No investigations<br>are assigned to you"
+msgstr "調査はあなたに<br>割り当てられていません"
 
 #: src/app/configuration/container/title-input-container.js:11
 msgid "Optional title"
 msgstr "タイトル（省略可）"
 
-#: src/app/configuration/component/configuration.js:32
+#: src/app/configuration/component/configuration.js:42
 msgid "Save"
 msgstr "保存"
 
-#: src/app/content.js:49
+#: src/app/configuration/component/configuration.js:62
+msgid "Select service"
+msgstr ""
+
+#: src/app/content.js:31
 msgid "Set up..."
 msgstr "セットアップ…"
 
-#: src/app/configuration/component/configuration.js:70
-msgid "Show last pinned build"
-msgstr "最後に固定されたビルドを表示"
+#: src/app/configuration/component/configuration.js:71
+msgid "Show green builds"
+msgstr ""
 
-#: src/app/configuration/component/configuration.js:59
-msgid "Show last successful build"
-msgstr "最後に成功したビルドを表示"
-
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:114
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:88
 msgid "Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday"
 msgstr "日曜日|月曜日|火曜日|水曜日|木曜日|金曜日|土曜日"
 
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:113
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:87
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
 msgstr "日|月|火|水|木|金|土"
 
-#: src/app/configuration/container/service-select-container.js:10
-#: src/app/configuration/container/service-select-container.js:12
-msgid "TeamCity server"
-msgstr "TeamCityサーバー"
+#: src/app/container/title-container.js:11
+#: src/app/container/title-container.js:17
+msgid "TeamCity Investigations"
+msgstr ""
 
-#: src/app/content.js:67
-msgid "This build doesn’t contain any artifacts"
-msgstr "このビルドにはアーティファクトが含まれていません"
+#: src/app/content.js:30
+msgid "TeamCity service is not configured yet."
+msgstr "TeamCityサービスはまだ構成されていません。"
 
-#: src/app/configuration/container/refresh-period-container.js:11
+#: src/app/investigation.js:40
+msgid "Tests failed:"
+msgstr "テストに失敗しました："
+
+#: src/app/configuration/component/configuration.js:15
 msgid "Widget refreshes every minute"
 msgstr "ウィジェットは1分ごとに更新されます"
 
-#: src/app/configuration/container/refresh-period-container.js:12
+#: src/app/configuration/component/configuration.js:16
 msgid "Widget refreshes every {{minutes}} minutes"
 msgstr "ウィジェットは{{minutes}}分ごとに更新されます"
 
-#: src/app/content.js:47
-msgid "Widget setup is not finished yet."
-msgstr "ウィジェットのセットアップはまだ完了していません。"
-
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:117
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:91
 msgid "am|pm"
 msgstr "am|pm"
 
-#: src/app/configuration/container/refresh-period-container.js:8
+#: src/app/configuration/component/configuration.js:13
 msgid "{{minutes}} min"
 msgstr "{{minutes}} 分"
 
