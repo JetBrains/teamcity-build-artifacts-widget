@@ -7,7 +7,7 @@
     "dist": "./dist"
   },
   "scripts": {
-    "build": "webpack -p --devtool sourcemap",
+    "build": "webpack -p",
     "dist": "npm run build && rm -f teamcity-build-artifacts-widget.zip && zip -r -j teamcity-build-artifacts-widget.zip ./dist/*.{js,json,html}",
     "test": "karma start",
     "lint": "eslint . && npm run stylelint",
