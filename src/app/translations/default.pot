@@ -4,87 +4,101 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: \n"
 
-#: src/app/investigation.js:41
-msgid "Build problems:"
+#: src/app/container/widget-container.js:15
+#: src/app/container/widget-container.js:30
+msgid "Artifacts"
 msgstr ""
 
-#: src/app/configuration/component/configuration.js:45
+#: src/app/container/widget-container.js:14
+msgid "Artifacts: {{ buildConfiguration }}"
+msgstr ""
+
+#: src/app/configuration/component/build-type-select.js:57
+#: src/app/configuration/component/build-type-select.js:58
+msgid "Build configuration"
+msgstr ""
+
+#: src/app/configuration/container/tags-input-container.js:11
+msgid "Build with specified tags (comma-separated)"
+msgstr ""
+
+#: src/app/configuration/component/configuration.js:35
 msgid "Cancel"
 msgstr ""
 
-#: src/app/content.js:39
-msgid "Cannot load investigations"
+#: src/app/content.js:57
+msgid "Cannot load build artifacts"
 msgstr ""
 
-#: src/app/configuration/component/configuration.js:79
-msgid "Hide child projects"
+#: src/app/configuration/container/branch-input-container.js:11
+msgid "Custom branch name"
 msgstr ""
 
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:90
+#: src/app/configuration/component/build-type-select.js:40
+msgid "Filter projects and build configurations"
+msgstr ""
+
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:116
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
 msgstr ""
 
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:89
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:115
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
-msgstr ""
-
-#: src/app/content.js:49
-msgid "No investigations<br>are assigned to you"
 msgstr ""
 
 #: src/app/configuration/container/title-input-container.js:11
 msgid "Optional title"
 msgstr ""
 
-#: src/app/configuration/component/configuration.js:42
+#: src/app/configuration/component/configuration.js:32
 msgid "Save"
 msgstr ""
 
-#: src/app/configuration/component/configuration.js:62
-msgid "Select service"
-msgstr ""
-
-#: src/app/content.js:31
+#: src/app/content.js:49
 msgid "Set up..."
 msgstr ""
 
-#: src/app/configuration/component/configuration.js:71
-msgid "Show green builds"
+#: src/app/configuration/component/configuration.js:70
+msgid "Show last pinned build"
 msgstr ""
 
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:88
+#: src/app/configuration/component/configuration.js:59
+msgid "Show last successful build"
+msgstr ""
+
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:114
 msgid "Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday"
 msgstr ""
 
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:87
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:113
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
 msgstr ""
 
-#: src/app/container/title-container.js:11
-#: src/app/container/title-container.js:17
-msgid "TeamCity Investigations"
+#: src/app/configuration/container/service-select-container.js:10
+#: src/app/configuration/container/service-select-container.js:12
+msgid "TeamCity server"
 msgstr ""
 
-#: src/app/content.js:30
-msgid "TeamCity service is not configured yet."
+#: src/app/content.js:67
+msgid "This build doesn’t contain any artifacts"
 msgstr ""
 
-#: src/app/investigation.js:40
-msgid "Tests failed:"
-msgstr ""
-
-#: src/app/configuration/component/configuration.js:15
+#: src/app/configuration/container/refresh-period-container.js:11
 msgid "Widget refreshes every minute"
 msgstr ""
 
-#: src/app/configuration/component/configuration.js:16
+#: src/app/configuration/container/refresh-period-container.js:12
 msgid "Widget refreshes every {{minutes}} minutes"
 msgstr ""
 
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:91
+#: src/app/content.js:47
+msgid "Widget setup is not finished yet."
+msgstr ""
+
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:117
 msgid "am|pm"
 msgstr ""
 
-#: src/app/configuration/component/configuration.js:13
+#: src/app/configuration/container/refresh-period-container.js:8
 msgid "{{minutes}} min"
 msgstr ""
