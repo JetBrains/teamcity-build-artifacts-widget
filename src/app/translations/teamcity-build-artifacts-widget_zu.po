@@ -11,90 +11,104 @@ msgstr ""
 "X-Crowdin-File-ID: 652262\n"
 "Language-Team: Zulu\n"
 "Language: zu_ZA\n"
-"PO-Revision-Date: 2022-05-18 10:41\n"
+"PO-Revision-Date: 2022-05-20 12:58\n"
 
-#: src/app/investigation.js:41
-msgid "Build problems:"
-msgstr "crwdns270133340:0crwdne270133340:0"
+#: src/app/container/widget-container.js:15
+#: src/app/container/widget-container.js:30
+msgid "Artifacts"
+msgstr "crwdns270198714:0crwdne270198714:0"
 
-#: src/app/configuration/component/configuration.js:45
+#: src/app/container/widget-container.js:14
+msgid "Artifacts: {{ buildConfiguration }}"
+msgstr "crwdns270198716:0{{ buildConfiguration }}crwdne270198716:0"
+
+#: src/app/configuration/component/build-type-select.js:57
+#: src/app/configuration/component/build-type-select.js:58
+msgid "Build configuration"
+msgstr "crwdns270198718:0crwdne270198718:0"
+
+#: src/app/configuration/container/tags-input-container.js:11
+msgid "Build with specified tags (comma-separated)"
+msgstr "crwdns270198720:0crwdne270198720:0"
+
+#: src/app/configuration/component/configuration.js:35
 msgid "Cancel"
 msgstr "crwdns270133342:0crwdne270133342:0"
 
-#: src/app/content.js:39
-msgid "Cannot load investigations"
-msgstr "crwdns270133344:0crwdne270133344:0"
+#: src/app/content.js:57
+msgid "Cannot load build artifacts"
+msgstr "crwdns270198722:0crwdne270198722:0"
 
-#: src/app/configuration/component/configuration.js:79
-msgid "Hide child projects"
-msgstr "crwdns270133346:0crwdne270133346:0"
+#: src/app/configuration/container/branch-input-container.js:11
+msgid "Custom branch name"
+msgstr "crwdns270198724:0crwdne270198724:0"
 
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:90
+#: src/app/configuration/component/build-type-select.js:40
+msgid "Filter projects and build configurations"
+msgstr "crwdns270198726:0crwdne270198726:0"
+
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:116
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
 msgstr "crwdns270133348:0crwdne270133348:0"
 
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:89
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:115
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 msgstr "crwdns270133350:0crwdne270133350:0"
-
-#: src/app/content.js:49
-msgid "No investigations<br>are assigned to you"
-msgstr "crwdns270133352:0crwdne270133352:0"
 
 #: src/app/configuration/container/title-input-container.js:11
 msgid "Optional title"
 msgstr "crwdns270133354:0crwdne270133354:0"
 
-#: src/app/configuration/component/configuration.js:42
+#: src/app/configuration/component/configuration.js:32
 msgid "Save"
 msgstr "crwdns270133356:0crwdne270133356:0"
 
-#: src/app/configuration/component/configuration.js:62
-msgid "Select service"
-msgstr "crwdns270133358:0crwdne270133358:0"
-
-#: src/app/content.js:31
+#: src/app/content.js:49
 msgid "Set up..."
 msgstr "crwdns270133360:0crwdne270133360:0"
 
-#: src/app/configuration/component/configuration.js:71
-msgid "Show green builds"
-msgstr "crwdns270133362:0crwdne270133362:0"
+#: src/app/configuration/component/configuration.js:70
+msgid "Show last pinned build"
+msgstr "crwdns270198728:0crwdne270198728:0"
 
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:88
+#: src/app/configuration/component/configuration.js:59
+msgid "Show last successful build"
+msgstr "crwdns270198730:0crwdne270198730:0"
+
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:114
 msgid "Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday"
 msgstr "crwdns270133364:0crwdne270133364:0"
 
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:87
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:113
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
 msgstr "crwdns270133366:0crwdne270133366:0"
 
-#: src/app/container/title-container.js:11
-#: src/app/container/title-container.js:17
-msgid "TeamCity Investigations"
-msgstr "crwdns270133368:0crwdne270133368:0"
+#: src/app/configuration/container/service-select-container.js:10
+#: src/app/configuration/container/service-select-container.js:12
+msgid "TeamCity server"
+msgstr "crwdns270198732:0crwdne270198732:0"
 
-#: src/app/content.js:30
-msgid "TeamCity service is not configured yet."
-msgstr "crwdns270133370:0crwdne270133370:0"
+#: src/app/content.js:67
+msgid "This build doesn’t contain any artifacts"
+msgstr "crwdns270198734:0crwdne270198734:0"
 
-#: src/app/investigation.js:40
-msgid "Tests failed:"
-msgstr "crwdns270133372:0crwdne270133372:0"
-
-#: src/app/configuration/component/configuration.js:15
+#: src/app/configuration/container/refresh-period-container.js:11
 msgid "Widget refreshes every minute"
 msgstr "crwdns270133374:0crwdne270133374:0"
 
-#: src/app/configuration/component/configuration.js:16
+#: src/app/configuration/container/refresh-period-container.js:12
 msgid "Widget refreshes every {{minutes}} minutes"
 msgstr "crwdns270133376:0{{minutes}}crwdne270133376:0"
 
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:91
+#: src/app/content.js:47
+msgid "Widget setup is not finished yet."
+msgstr "crwdns270198736:0crwdne270198736:0"
+
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:117
 msgid "am|pm"
 msgstr "crwdns270133378:0crwdne270133378:0"
 
-#: src/app/configuration/component/configuration.js:13
+#: src/app/configuration/container/refresh-period-container.js:8
 msgid "{{minutes}} min"
 msgstr "crwdns270133380:0{{minutes}}crwdne270133380:0"
 

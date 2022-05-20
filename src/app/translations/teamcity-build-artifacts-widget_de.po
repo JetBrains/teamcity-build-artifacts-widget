@@ -11,90 +11,104 @@ msgstr ""
 "X-Crowdin-File-ID: 30064\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2022-05-18 10:34\n"
+"PO-Revision-Date: 2022-05-20 12:53\n"
 
-#: src/app/investigation.js:41
-msgid "Build problems:"
-msgstr "Build-Probleme:"
+#: src/app/container/widget-container.js:15
+#: src/app/container/widget-container.js:30
+msgid "Artifacts"
+msgstr "Artefakte"
 
-#: src/app/configuration/component/configuration.js:45
+#: src/app/container/widget-container.js:14
+msgid "Artifacts: {{ buildConfiguration }}"
+msgstr "Artefakte: {{ buildConfiguration }}"
+
+#: src/app/configuration/component/build-type-select.js:57
+#: src/app/configuration/component/build-type-select.js:58
+msgid "Build configuration"
+msgstr "Build-Konfiguration"
+
+#: src/app/configuration/container/tags-input-container.js:11
+msgid "Build with specified tags (comma-separated)"
+msgstr "Build mit angegebenen Tags (durch Kommas getrennt)"
+
+#: src/app/configuration/component/configuration.js:35
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: src/app/content.js:39
-msgid "Cannot load investigations"
-msgstr "Untersuchungen können nicht geladen werden"
+#: src/app/content.js:57
+msgid "Cannot load build artifacts"
+msgstr "Build-Artefakte können nicht geladen werden"
 
-#: src/app/configuration/component/configuration.js:79
-msgid "Hide child projects"
-msgstr "Untergeordnete Projekte ausblenden"
+#: src/app/configuration/container/branch-input-container.js:11
+msgid "Custom branch name"
+msgstr "Benutzerdefinierter Zweigname"
 
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:90
+#: src/app/configuration/component/build-type-select.js:40
+msgid "Filter projects and build configurations"
+msgstr "Projekte und Build-Konfigurationen filtern"
+
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:116
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
 msgstr "Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember"
 
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:89
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:115
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 msgstr "Jan|Feb|Mär|Apr|Mai|Jun|Jul|Aug|Sep|Okt|Nov|Dez"
-
-#: src/app/content.js:49
-msgid "No investigations<br>are assigned to you"
-msgstr "Ihnen sind keine<br>Untersuchungen zugeordnet"
 
 #: src/app/configuration/container/title-input-container.js:11
 msgid "Optional title"
 msgstr "Optionaler Titel"
 
-#: src/app/configuration/component/configuration.js:42
+#: src/app/configuration/component/configuration.js:32
 msgid "Save"
 msgstr "Speichern"
 
-#: src/app/configuration/component/configuration.js:62
-msgid "Select service"
-msgstr "Service auswählen"
-
-#: src/app/content.js:31
+#: src/app/content.js:49
 msgid "Set up..."
 msgstr "Einrichten..."
 
-#: src/app/configuration/component/configuration.js:71
-msgid "Show green builds"
-msgstr "Grüne Builds anzeigen"
+#: src/app/configuration/component/configuration.js:70
+msgid "Show last pinned build"
+msgstr "Letzten angepinnten Build anzeigen"
 
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:88
+#: src/app/configuration/component/configuration.js:59
+msgid "Show last successful build"
+msgstr "Letzten erfolgreichen Build anzeigen"
+
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:114
 msgid "Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday"
 msgstr "Sonntag|Montag|Dienstag|Mittwoch|Donnerstag|Freitag|Samstag"
 
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:87
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:113
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
 msgstr "So|Mo|Di|Mi|Do|Fr|Sa"
 
-#: src/app/container/title-container.js:11
-#: src/app/container/title-container.js:17
-msgid "TeamCity Investigations"
-msgstr "TeamCity-Untersuchungen"
+#: src/app/configuration/container/service-select-container.js:10
+#: src/app/configuration/container/service-select-container.js:12
+msgid "TeamCity server"
+msgstr "TeamCity-Server"
 
-#: src/app/content.js:30
-msgid "TeamCity service is not configured yet."
-msgstr "TeamCity-Service ist noch nicht konfiguriert."
+#: src/app/content.js:67
+msgid "This build doesn’t contain any artifacts"
+msgstr "Dieser Build enthält keine Artefakte"
 
-#: src/app/investigation.js:40
-msgid "Tests failed:"
-msgstr "Fehlgeschlagene Tests:"
-
-#: src/app/configuration/component/configuration.js:15
+#: src/app/configuration/container/refresh-period-container.js:11
 msgid "Widget refreshes every minute"
 msgstr "Widget wird jede Minute aktualisiert"
 
-#: src/app/configuration/component/configuration.js:16
+#: src/app/configuration/container/refresh-period-container.js:12
 msgid "Widget refreshes every {{minutes}} minutes"
 msgstr "Widget wird alle {{minutes}} Minuten aktualisiert"
 
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:91
+#: src/app/content.js:47
+msgid "Widget setup is not finished yet."
+msgstr "Die Widget-Einrichtung ist noch nicht beendet."
+
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:117
 msgid "am|pm"
 msgstr "AM|PM"
 
-#: src/app/configuration/component/configuration.js:13
+#: src/app/configuration/container/refresh-period-container.js:8
 msgid "{{minutes}} min"
 msgstr "{{minutes}} Minuten"
 

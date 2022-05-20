@@ -11,90 +11,104 @@ msgstr ""
 "X-Crowdin-File-ID: 30064\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2022-05-18 10:36\n"
+"PO-Revision-Date: 2022-05-20 12:56\n"
 
-#: src/app/investigation.js:41
-msgid "Build problems:"
-msgstr "Проблемы со сборкой:"
+#: src/app/container/widget-container.js:15
+#: src/app/container/widget-container.js:30
+msgid "Artifacts"
+msgstr ""
 
-#: src/app/configuration/component/configuration.js:45
+#: src/app/container/widget-container.js:14
+msgid "Artifacts: {{ buildConfiguration }}"
+msgstr ""
+
+#: src/app/configuration/component/build-type-select.js:57
+#: src/app/configuration/component/build-type-select.js:58
+msgid "Build configuration"
+msgstr "Конфигурация сборки"
+
+#: src/app/configuration/container/tags-input-container.js:11
+msgid "Build with specified tags (comma-separated)"
+msgstr "Укажите теги для сборки (через запятую)"
+
+#: src/app/configuration/component/configuration.js:35
 msgid "Cancel"
 msgstr "Отмена"
 
-#: src/app/content.js:39
-msgid "Cannot load investigations"
-msgstr "Невозможно загрузить исследования"
-
-#: src/app/configuration/component/configuration.js:79
-msgid "Hide child projects"
+#: src/app/content.js:57
+msgid "Cannot load build artifacts"
 msgstr ""
 
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:90
+#: src/app/configuration/container/branch-input-container.js:11
+msgid "Custom branch name"
+msgstr "Пользовательское имя ветки"
+
+#: src/app/configuration/component/build-type-select.js:40
+msgid "Filter projects and build configurations"
+msgstr "Фильтровать проекты и конфигурации сборки"
+
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:116
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
 msgstr "январь|февраль|март|апрель|май|июнь|июль|август|сентябрь|октябрь|ноябрь|декабрь"
 
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:89
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:115
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 msgstr "янв|фев|мар|апр|мая|июн|июл|авг|сен|окт|ноя|дек"
-
-#: src/app/content.js:49
-msgid "No investigations<br>are assigned to you"
-msgstr "Вам не назначены<br>никакие исследования"
 
 #: src/app/configuration/container/title-input-container.js:11
 msgid "Optional title"
 msgstr "Необязательный заголовок"
 
-#: src/app/configuration/component/configuration.js:42
+#: src/app/configuration/component/configuration.js:32
 msgid "Save"
 msgstr "Сохранить"
 
-#: src/app/configuration/component/configuration.js:62
-msgid "Select service"
-msgstr ""
-
-#: src/app/content.js:31
+#: src/app/content.js:49
 msgid "Set up..."
 msgstr "Настроить..."
 
-#: src/app/configuration/component/configuration.js:71
-msgid "Show green builds"
-msgstr ""
+#: src/app/configuration/component/configuration.js:70
+msgid "Show last pinned build"
+msgstr "Показывать последнюю закрепленную сборку"
 
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:88
+#: src/app/configuration/component/configuration.js:59
+msgid "Show last successful build"
+msgstr "Показывать последнюю успешную сборку"
+
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:114
 msgid "Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday"
 msgstr "воскресенье|понедельник|вторник|среда|четверг|пятница|суббота"
 
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:87
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:113
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
 msgstr "вс|пн|вт|ср|чт|пт|сб"
 
-#: src/app/container/title-container.js:11
-#: src/app/container/title-container.js:17
-msgid "TeamCity Investigations"
-msgstr ""
+#: src/app/configuration/container/service-select-container.js:10
+#: src/app/configuration/container/service-select-container.js:12
+msgid "TeamCity server"
+msgstr "Сервер TeamCity"
 
-#: src/app/content.js:30
-msgid "TeamCity service is not configured yet."
-msgstr "Сервис TeamCity еще не настроен."
+#: src/app/content.js:67
+msgid "This build doesn’t contain any artifacts"
+msgstr "Сборка не содержит артефактов"
 
-#: src/app/investigation.js:40
-msgid "Tests failed:"
-msgstr "Неудавшиеся тесты:"
-
-#: src/app/configuration/component/configuration.js:15
+#: src/app/configuration/container/refresh-period-container.js:11
 msgid "Widget refreshes every minute"
 msgstr "Виджет обновляется раз в минуту"
 
-#: src/app/configuration/component/configuration.js:16
+#: src/app/configuration/container/refresh-period-container.js:12
 msgid "Widget refreshes every {{minutes}} minutes"
 msgstr "Виджет обновляется раз в {{minutes}} мин"
 
-#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:91
+#: src/app/content.js:47
+msgid "Widget setup is not finished yet."
+msgstr "Настройка виджета еще не закончена."
+
+#: node_modules/hub-dashboard-addons/components/localization/src/localization.js:117
 msgid "am|pm"
 msgstr "ДП|ПП"
 
-#: src/app/configuration/component/configuration.js:13
+#: src/app/configuration/container/refresh-period-container.js:8
 msgid "{{minutes}} min"
 msgstr "{{minutes}} мин"
 
