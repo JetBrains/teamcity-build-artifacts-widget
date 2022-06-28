@@ -11,16 +11,16 @@ msgstr ""
 "X-Crowdin-File-ID: 30064\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2022-05-20 12:56\n"
+"PO-Revision-Date: 2022-06-28 14:05\n"
 
 #: src/app/container/widget-container.js:15
 #: src/app/container/widget-container.js:30
 msgid "Artifacts"
-msgstr ""
+msgstr "Artefactos"
 
 #: src/app/container/widget-container.js:14
 msgid "Artifacts: {{ buildConfiguration }}"
-msgstr ""
+msgstr "Artefactos: {{ buildConfiguration }}"
 
 #: src/app/configuration/component/build-type-select.js:57
 #: src/app/configuration/component/build-type-select.js:58
@@ -37,7 +37,7 @@ msgstr "Cancelar"
 
 #: src/app/content.js:57
 msgid "Cannot load build artifacts"
-msgstr ""
+msgstr "No pueden cargarse los artefactos del build"
 
 #: src/app/configuration/container/branch-input-container.js:11
 msgid "Custom branch name"
@@ -69,11 +69,11 @@ msgstr "Configurar..."
 
 #: src/app/configuration/component/configuration.js:70
 msgid "Show last pinned build"
-msgstr ""
+msgstr "Mostrar el último build anclado"
 
 #: src/app/configuration/component/configuration.js:59
 msgid "Show last successful build"
-msgstr ""
+msgstr "Mostrar el último build correcto"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:114
 msgid "Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday"
@@ -86,11 +86,11 @@ msgstr "Dom|Lun|Mar|Mié|Jue|Vie|Sáb"
 #: src/app/configuration/container/service-select-container.js:10
 #: src/app/configuration/container/service-select-container.js:12
 msgid "TeamCity server"
-msgstr ""
+msgstr "Servidor de TeamCity"
 
 #: src/app/content.js:67
 msgid "This build doesn’t contain any artifacts"
-msgstr ""
+msgstr "Este build no contiene artefactos"
 
 #: src/app/configuration/container/refresh-period-container.js:11
 msgid "Widget refreshes every minute"

@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 30064\n"
 "Language-Team: Esperanto\n"
 "Language: eo_UY\n"
-"PO-Revision-Date: 2022-05-20 12:57\n"
+"PO-Revision-Date: 2022-05-20 23:48\n"
 
 #: src/app/container/widget-container.js:15
 #: src/app/container/widget-container.js:30

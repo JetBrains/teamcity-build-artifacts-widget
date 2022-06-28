@@ -11,16 +11,16 @@ msgstr ""
 "X-Crowdin-File-ID: 30064\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2022-05-20 12:54\n"
+"PO-Revision-Date: 2022-06-28 14:06\n"
 
 #: src/app/container/widget-container.js:15
 #: src/app/container/widget-container.js:30
 msgid "Artifacts"
-msgstr ""
+msgstr "アーティファクト"
 
 #: src/app/container/widget-container.js:14
 msgid "Artifacts: {{ buildConfiguration }}"
-msgstr ""
+msgstr "アーティファクト：{{ buildConfiguration }}"
 
 #: src/app/configuration/component/build-type-select.js:57
 #: src/app/configuration/component/build-type-select.js:58
@@ -69,11 +69,11 @@ msgstr "セットアップ…"
 
 #: src/app/configuration/component/configuration.js:70
 msgid "Show last pinned build"
-msgstr ""
+msgstr "最後に固定されたビルドを表示"
 
 #: src/app/configuration/component/configuration.js:59
 msgid "Show last successful build"
-msgstr ""
+msgstr "最後に成功したビルドを表示"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:114
 msgid "Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday"
@@ -86,7 +86,7 @@ msgstr "日|月|火|水|木|金|土"
 #: src/app/configuration/container/service-select-container.js:10
 #: src/app/configuration/container/service-select-container.js:12
 msgid "TeamCity server"
-msgstr ""
+msgstr "TeamCityサーバー"
 
 #: src/app/content.js:67
 msgid "This build doesn’t contain any artifacts"
@@ -102,7 +102,7 @@ msgstr "ウィジェットは{{minutes}}分ごとに更新されます"
 
 #: src/app/content.js:47
 msgid "Widget setup is not finished yet."
-msgstr ""
+msgstr "ウィジェットの設定はまだ完了していません。"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:117
 msgid "am|pm"

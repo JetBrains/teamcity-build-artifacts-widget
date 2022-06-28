@@ -11,16 +11,16 @@ msgstr ""
 "X-Crowdin-File-ID: 30064\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2022-05-20 12:56\n"
+"PO-Revision-Date: 2022-06-28 14:06\n"
 
 #: src/app/container/widget-container.js:15
 #: src/app/container/widget-container.js:30
 msgid "Artifacts"
-msgstr ""
+msgstr "Артефакты"
 
 #: src/app/container/widget-container.js:14
 msgid "Artifacts: {{ buildConfiguration }}"
-msgstr ""
+msgstr "Артефакты: {{ buildConfiguration }}"
 
 #: src/app/configuration/component/build-type-select.js:57
 #: src/app/configuration/component/build-type-select.js:58
@@ -37,7 +37,7 @@ msgstr "Отмена"
 
 #: src/app/content.js:57
 msgid "Cannot load build artifacts"
-msgstr ""
+msgstr "Невозможно загрузить артефакты сборки"
 
 #: src/app/configuration/container/branch-input-container.js:11
 msgid "Custom branch name"
