@@ -11,25 +11,25 @@ msgstr ""
 "X-Crowdin-File-ID: 652262\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2022-06-28 21:48\n"
+"PO-Revision-Date: 2022-06-29 11:14\n"
 
 #: src/app/container/widget-container.js:15
 #: src/app/container/widget-container.js:30
 msgid "Artifacts"
-msgstr ""
+msgstr "Artefatti"
 
 #: src/app/container/widget-container.js:14
 msgid "Artifacts: {{ buildConfiguration }}"
-msgstr ""
+msgstr "Artefatti: {{ buildConfiguration }}"
 
 #: src/app/configuration/component/build-type-select.js:57
 #: src/app/configuration/component/build-type-select.js:58
 msgid "Build configuration"
-msgstr ""
+msgstr "Configurazione della build"
 
 #: src/app/configuration/container/tags-input-container.js:11
 msgid "Build with specified tags (comma-separated)"
-msgstr ""
+msgstr "Build con tag specificati (separati da virgole)"
 
 #: src/app/configuration/component/configuration.js:35
 msgid "Cancel"
@@ -37,15 +37,15 @@ msgstr "Annulla"
 
 #: src/app/content.js:57
 msgid "Cannot load build artifacts"
-msgstr ""
+msgstr "Impossibile caricare gli artefatti della build"
 
 #: src/app/configuration/container/branch-input-container.js:11
 msgid "Custom branch name"
-msgstr ""
+msgstr "Nome branch personalizzato"
 
 #: src/app/configuration/component/build-type-select.js:40
 msgid "Filter projects and build configurations"
-msgstr ""
+msgstr "Filtra i progetti e compila le configurazioni"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:116
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
@@ -69,11 +69,11 @@ msgstr "Imposta..."
 
 #: src/app/configuration/component/configuration.js:70
 msgid "Show last pinned build"
-msgstr ""
+msgstr "Mostra l'ultima build fissata"
 
 #: src/app/configuration/component/configuration.js:59
 msgid "Show last successful build"
-msgstr ""
+msgstr "Mostra l'ultima build riuscita"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:114
 msgid "Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday"
@@ -90,7 +90,7 @@ msgstr "Server TeamCity"
 
 #: src/app/content.js:67
 msgid "This build doesn’t contain any artifacts"
-msgstr ""
+msgstr "Questa build non contiene alcun artefatto"
 
 #: src/app/configuration/container/refresh-period-container.js:11
 msgid "Widget refreshes every minute"
@@ -102,7 +102,7 @@ msgstr "Il widget si aggiorna ogni {{minutes}} minuti"
 
 #: src/app/content.js:47
 msgid "Widget setup is not finished yet."
-msgstr ""
+msgstr "La configurazione del widget non è ancora terminata."
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:117
 msgid "am|pm"
