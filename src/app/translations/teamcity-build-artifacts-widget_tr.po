@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 652262\n"
 "Language-Team: Turkish\n"
 "Language: tr_TR\n"
-"PO-Revision-Date: 2022-06-29 11:15\n"
+"PO-Revision-Date: 2023-08-09 12:44\n"
 
 #: src/app/container/widget-container.js:15
 #: src/app/container/widget-container.js:30
@@ -29,11 +29,11 @@ msgstr ""
 
 #: src/app/configuration/container/tags-input-container.js:11
 msgid "Build with specified tags (comma-separated)"
-msgstr ""
+msgstr "Belirtilen etiketlerle derle (virgülle ayrılmış)"
 
 #: src/app/configuration/component/configuration.js:35
 msgid "Cancel"
-msgstr ""
+msgstr "İptal"
 
 #: src/app/content.js:57
 msgid "Cannot load build artifacts"
@@ -41,7 +41,7 @@ msgstr ""
 
 #: src/app/configuration/container/branch-input-container.js:11
 msgid "Custom branch name"
-msgstr ""
+msgstr "Özel dal adı"
 
 #: src/app/configuration/component/build-type-select.js:40
 msgid "Filter projects and build configurations"
@@ -49,19 +49,19 @@ msgstr ""
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:116
 msgid "January|February|March|April|May|June|July|August|September|October|November|December"
-msgstr ""
+msgstr "Ocak|Şubat|Mart|Nisan|Mayıs|Haziran|Temmuz|Ağustos|Eylül|Ekim|Kasım|Aralık"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:115
 msgid "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
-msgstr ""
+msgstr "Oca|Şub|Mar|Nis|May|Haz|Tem|Ağu|Eyl|Eki|Kas|Ara"
 
 #: src/app/configuration/container/title-input-container.js:11
 msgid "Optional title"
-msgstr ""
+msgstr "İsteğe bağlı başlık"
 
 #: src/app/configuration/component/configuration.js:32
 msgid "Save"
-msgstr ""
+msgstr "Kaydet"
 
 #: src/app/content.js:49
 msgid "Set up..."
@@ -69,24 +69,24 @@ msgstr ""
 
 #: src/app/configuration/component/configuration.js:70
 msgid "Show last pinned build"
-msgstr ""
+msgstr "En son sabitlenen derlemeyi göster"
 
 #: src/app/configuration/component/configuration.js:59
 msgid "Show last successful build"
-msgstr ""
+msgstr "Son başarılı derlemeyi göster"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:114
 msgid "Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday"
-msgstr ""
+msgstr "Pazar|Pazartesi|Salı|Çarşamba|Perşembe|Cuma|Cumartesi"
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:113
 msgid "Sun|Mon|Tue|Wed|Thu|Fri|Sat"
-msgstr ""
+msgstr "Paz|Pzt|Sal|Çrş|Prş|Cum|Cmt"
 
 #: src/app/configuration/container/service-select-container.js:10
 #: src/app/configuration/container/service-select-container.js:12
 msgid "TeamCity server"
-msgstr ""
+msgstr "TeamCity sunucusu"
 
 #: src/app/content.js:67
 msgid "This build doesn’t contain any artifacts"
@@ -94,21 +94,21 @@ msgstr ""
 
 #: src/app/configuration/container/refresh-period-container.js:11
 msgid "Widget refreshes every minute"
-msgstr ""
+msgstr "Widget her dakika yenilenir"
 
 #: src/app/configuration/container/refresh-period-container.js:12
 msgid "Widget refreshes every {{minutes}} minutes"
-msgstr ""
+msgstr "Widget {{minutes}} dakikada bir yenilenir"
 
 #: src/app/content.js:47
 msgid "Widget setup is not finished yet."
-msgstr ""
+msgstr "Widget kurulumu henüz bitmedi."
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:117
 msgid "am|pm"
-msgstr ""
+msgstr "öö|ös"
 
 #: src/app/configuration/container/refresh-period-container.js:8
 msgid "{{minutes}} min"
-msgstr ""
+msgstr "{{minutes}} dk"
 

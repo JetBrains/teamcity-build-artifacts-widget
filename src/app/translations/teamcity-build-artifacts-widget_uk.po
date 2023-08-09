@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 652262\n"
 "Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
-"PO-Revision-Date: 2022-06-29 11:15\n"
+"PO-Revision-Date: 2023-08-09 12:44\n"
 
 #: src/app/container/widget-container.js:15
 #: src/app/container/widget-container.js:30
@@ -94,11 +94,11 @@ msgstr ""
 
 #: src/app/configuration/container/refresh-period-container.js:11
 msgid "Widget refreshes every minute"
-msgstr ""
+msgstr "Віджет оновлюється щохвилини"
 
 #: src/app/configuration/container/refresh-period-container.js:12
 msgid "Widget refreshes every {{minutes}} minutes"
-msgstr ""
+msgstr "Віджет оновлюється з інтервалом у {{minutes}} хв"
 
 #: src/app/content.js:47
 msgid "Widget setup is not finished yet."
@@ -106,9 +106,9 @@ msgstr ""
 
 #: node_modules/hub-dashboard-addons/components/localization/src/localization.js:117
 msgid "am|pm"
-msgstr ""
+msgstr "дп|пп"
 
 #: src/app/configuration/container/refresh-period-container.js:8
 msgid "{{minutes}} min"
-msgstr ""
+msgstr "{{minutes}} хв"
 
