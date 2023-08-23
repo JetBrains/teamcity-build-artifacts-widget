@@ -1,7 +1,7 @@
 {
   "key": "teamcity-build-artifacts-widget",
   "name": "Build Artifacts",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Hub dashboard widget to list downloadable artifacts of a TeamCity configurations",
   "author": "JetBrains",
   "applicationName": "TeamCity",
